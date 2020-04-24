@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="HW8_1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="download" translatesAutoresizingMaskIntoConstraints="NO" id="Nna-Sn-faa">
+                                <rect key="frame" x="87" y="54" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="VVz-Eu-FjU"/>
+                                    <constraint firstAttribute="width" constant="240" id="y7o-ts-JoY"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Username" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ONp-GD-xOH">
+                                <rect key="frame" x="120.66666666666669" y="203" width="173" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="173" id="bUi-fm-HpS"/>
+                                    <constraint firstAttribute="height" constant="30" id="js2-au-a9t"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Password" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Zas-Yh-NIG">
+                                <rect key="frame" x="120.66666666666669" y="254" width="173" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="173" id="dKP-HK-sKl"/>
+                                    <constraint firstAttribute="height" constant="30" id="f9L-bM-BCQ"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1OS-qf-A9G">
+                                <rect key="frame" x="143" y="305" width="128" height="54"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="54" id="P5D-3a-ohe"/>
+                                    <constraint firstAttribute="width" constant="128" id="UyP-sl-vvD"/>
+                                </constraints>
+                                <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Sign In">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="signIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="la9-8x-A83"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <rect key="contentStretch" x="0.0" y="0.0" width="0.94999999999999996" height="1"/>
+                        <constraints>
+                            <constraint firstItem="Zas-Yh-NIG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="09J-9d-Diw"/>
+                            <constraint firstItem="Nna-Sn-faa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DED-f2-Eor"/>
+                            <constraint firstItem="1OS-qf-A9G" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DVA-1o-RCU"/>
+                            <constraint firstItem="Nna-Sn-faa" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="Dsb-Wt-hM0"/>
+                            <constraint firstItem="Zas-Yh-NIG" firstAttribute="top" secondItem="ONp-GD-xOH" secondAttribute="bottom" constant="21" id="ElD-Mw-GhZ"/>
+                            <constraint firstItem="ONp-GD-xOH" firstAttribute="top" secondItem="Nna-Sn-faa" secondAttribute="bottom" constant="21" id="Hb0-Zs-QnL"/>
+                            <constraint firstItem="1OS-qf-A9G" firstAttribute="top" secondItem="Zas-Yh-NIG" secondAttribute="bottom" constant="21" id="cge-XZ-hZf"/>
+                            <constraint firstItem="ONp-GD-xOH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fqM-Hf-mSr"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="passWord" destination="Zas-Yh-NIG" id="Dq3-b1-1yR"/>
+                        <outlet property="userName" destination="ONp-GD-xOH" id="b1P-LU-U0r"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="133.59999999999999" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="download" width="275" height="183"/>
+    </resources>
+</document>
