@@ -85,11 +85,11 @@
             </objects>
             <point key="canvasLocation" x="40.799999999999997" y="26.53673163418291"/>
         </scene>
-        <!--View Controller-->
+        <!--View Controller Registered-->
         <scene sceneID="IQN-nt-boh">
             <objects>
-                <viewController id="Apv-HB-IAV" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="tPu-Zk-UJc" customClass="ViewControllerRegistered">
+                <viewController id="Apv-HB-IAV" customClass="ViewControllerRegistered" customModule="HW9" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tPu-Zk-UJc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
