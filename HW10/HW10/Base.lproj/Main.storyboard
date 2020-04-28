@@ -18,65 +18,87 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jho-fr-vbS">
-                                <rect key="frame" x="133" y="469" width="108" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jho-fr-vbS">
+                                <rect key="frame" x="134" y="406" width="108" height="30"/>
                                 <color key="backgroundColor" red="1" green="0.91276133270000004" blue="0.59590163969999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="გამოთვლა"/>
                                 <connections>
                                     <action selector="toSalaroButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="POs-Tf-Bef"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1dy-dc-oDJ">
-                                <rect key="frame" x="133" y="409" width="108" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="0.91276133270000004" blue="0.59590163969999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="დამატება"/>
-                                <connections>
-                                    <action selector="addProduct:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3Yy-Dn-CCe"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wIj-LA-io8">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wIj-LA-io8">
                                 <rect key="frame" x="316" y="93" width="28" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="28" id="ANn-bX-RF2"/>
+                                    <constraint firstAttribute="height" constant="21" id="zCM-Oi-izV"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="ფასი" borderStyle="roundedRect" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HoN-pt-LWh">
-                                <rect key="frame" x="91" y="236" width="192" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="ფასი" borderStyle="roundedRect" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HoN-pt-LWh">
+                                <rect key="frame" x="33" y="232" width="311" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="რაოდენობა" borderStyle="roundedRect" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hsc-y9-ucv">
-                                <rect key="frame" x="91" y="187" width="192" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="რაოდენობა" borderStyle="roundedRect" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hsc-y9-ucv">
+                                <rect key="frame" x="33" y="187" width="311" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Ktg-JP-l7f">
-                                <rect key="frame" x="33" y="296" width="311" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Ktg-JP-l7f">
+                                <rect key="frame" x="33" y="288" width="311" height="29"/>
                                 <segments>
                                     <segment title="ბოსტან"/>
                                     <segment title="ხილი"/>
                                     <segment title="სხვა"/>
                                 </segments>
                             </segmentedControl>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="lyW-G5-mNF">
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="lyW-G5-mNF">
                                 <rect key="frame" x="33" y="136" width="311" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
                                     <segment title="კაპუსტა"/>
                                     <segment title="მარწყვი"/>
                                     <segment title="ავტომატი"/>
                                 </segments>
                             </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1dy-dc-oDJ">
+                                <rect key="frame" x="133.5" y="346" width="108" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.91276133270000004" blue="0.59590163969999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="108" id="Pno-PV-71I"/>
+                                    <constraint firstAttribute="height" constant="30" id="brn-y4-cMs"/>
+                                </constraints>
+                                <state key="normal" title="დამატება"/>
+                                <connections>
+                                    <action selector="addProduct:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3Yy-Dn-CCe"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="HoN-pt-LWh" firstAttribute="leading" secondItem="Hsc-y9-ucv" secondAttribute="leading" id="1St-fV-zVU"/>
+                            <constraint firstItem="Ktg-JP-l7f" firstAttribute="trailing" secondItem="HoN-pt-LWh" secondAttribute="trailing" id="1W5-tR-KQk"/>
+                            <constraint firstItem="Ktg-JP-l7f" firstAttribute="top" secondItem="HoN-pt-LWh" secondAttribute="bottom" constant="26" id="9xe-i3-a8I"/>
+                            <constraint firstItem="Jho-fr-vbS" firstAttribute="top" secondItem="1dy-dc-oDJ" secondAttribute="bottom" constant="30" id="Auh-dE-kcH"/>
+                            <constraint firstItem="HoN-pt-LWh" firstAttribute="trailing" secondItem="Hsc-y9-ucv" secondAttribute="trailing" id="CmP-eT-71g"/>
+                            <constraint firstItem="Ktg-JP-l7f" firstAttribute="leading" secondItem="HoN-pt-LWh" secondAttribute="leading" id="EtB-60-U7E"/>
+                            <constraint firstItem="Hsc-y9-ucv" firstAttribute="trailing" secondItem="lyW-G5-mNF" secondAttribute="trailing" id="I2Y-BF-baR"/>
+                            <constraint firstItem="HoN-pt-LWh" firstAttribute="top" secondItem="Hsc-y9-ucv" secondAttribute="bottom" constant="15" id="J5A-fr-trB"/>
+                            <constraint firstItem="1dy-dc-oDJ" firstAttribute="top" secondItem="Ktg-JP-l7f" secondAttribute="bottom" constant="30" id="OXb-On-6GO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lyW-G5-mNF" secondAttribute="trailing" constant="31" id="Od6-4l-DfO"/>
+                            <constraint firstItem="Hsc-y9-ucv" firstAttribute="leading" secondItem="lyW-G5-mNF" secondAttribute="leading" id="Tpf-NR-wZA"/>
+                            <constraint firstItem="lyW-G5-mNF" firstAttribute="top" secondItem="wIj-LA-io8" secondAttribute="bottom" constant="22" id="cUu-TB-QF7"/>
+                            <constraint firstItem="Jho-fr-vbS" firstAttribute="trailing" secondItem="1dy-dc-oDJ" secondAttribute="trailing" id="fLk-9V-hlG"/>
+                            <constraint firstItem="wIj-LA-io8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="29" id="hKj-AP-dZP"/>
+                            <constraint firstItem="Jho-fr-vbS" firstAttribute="leading" secondItem="1dy-dc-oDJ" secondAttribute="leading" id="lBc-Xm-7a1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wIj-LA-io8" secondAttribute="trailing" constant="31" id="oSi-fm-nfz"/>
+                            <constraint firstItem="lyW-G5-mNF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="33" id="olG-Je-zp3"/>
+                            <constraint firstItem="Hsc-y9-ucv" firstAttribute="top" secondItem="lyW-G5-mNF" secondAttribute="bottom" constant="23" id="sAp-ah-Uwd"/>
+                            <constraint firstItem="1dy-dc-oDJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="z80-9h-FLW"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="მარკეტი" id="3wb-HN-XM8"/>
@@ -101,29 +123,37 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Products" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jiv-r3-n60">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Products" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jiv-r3-n60">
                                 <rect key="frame" x="46" y="137" width="271" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Quantity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tq8-1R-FI5">
-                                <rect key="frame" x="46" y="215" width="271" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quantity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tq8-1R-FI5">
+                                <rect key="frame" x="46" y="203" width="271" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L3k-fS-WTt">
-                                <rect key="frame" x="46" y="281" width="271" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L3k-fS-WTt">
+                                <rect key="frame" x="46" y="269" width="271" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="L3k-fS-WTt" firstAttribute="leading" secondItem="Tq8-1R-FI5" secondAttribute="leading" id="0vf-sN-HBk"/>
+                            <constraint firstItem="L3k-fS-WTt" firstAttribute="top" secondItem="Tq8-1R-FI5" secondAttribute="bottom" constant="45" id="28G-cf-VD9"/>
+                            <constraint firstItem="NDO-ja-7gB" firstAttribute="trailing" secondItem="Jiv-r3-n60" secondAttribute="trailing" constant="58" id="51K-iy-e8N"/>
+                            <constraint firstItem="Jiv-r3-n60" firstAttribute="leading" secondItem="NDO-ja-7gB" secondAttribute="leading" constant="46" id="OuA-pd-iyC"/>
+                            <constraint firstItem="Jiv-r3-n60" firstAttribute="top" secondItem="NDO-ja-7gB" secondAttribute="top" constant="73" id="Q99-vI-5hd"/>
+                            <constraint firstItem="Tq8-1R-FI5" firstAttribute="top" secondItem="Jiv-r3-n60" secondAttribute="bottom" constant="45" id="UuG-LK-jc2"/>
+                            <constraint firstItem="Tq8-1R-FI5" firstAttribute="leading" secondItem="Jiv-r3-n60" secondAttribute="leading" id="W4g-I5-jOs"/>
+                            <constraint firstItem="Tq8-1R-FI5" firstAttribute="trailing" secondItem="Jiv-r3-n60" secondAttribute="trailing" id="bnw-lg-Q5I"/>
+                            <constraint firstItem="L3k-fS-WTt" firstAttribute="trailing" secondItem="Tq8-1R-FI5" secondAttribute="trailing" id="bso-Zn-hrs"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="NDO-ja-7gB"/>
                     </view>
                     <navigationItem key="navigationItem" title="სალარო" id="UnK-6r-nGt"/>
