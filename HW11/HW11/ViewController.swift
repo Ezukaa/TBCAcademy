@@ -27,7 +27,6 @@ class ViewController: UIViewController {
     
     
     func createUser() {
-        //arafris shekvanis drosac amatebs obieqts!!!
         guard let userName = userNameField.text else{return}
         guard let userLastName = userLastNameField.text else{return}
         guard let userEmail = userEmailField.text else{return}

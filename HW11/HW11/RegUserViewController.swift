@@ -21,17 +21,24 @@ class RegUserViewController: UIViewController {
     
 
 }
-extension RegUserViewController: UITableViewDelegate{
-    
-}
-extension RegUserViewController: UITableViewDataSource{
+
+extension RegUserViewController: UITableViewDataSource, UITableViewDelegate{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return users.count
     }
+//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//        let cell = tableView.dequeueReusableCell(withIdentifier: "cell")
+//        cell?.textLabel?.text = "ემაილ: \(users[indexPath.row].email) "
+//        return cell!
+//    }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell")
-        cell?.textLabel?.text = "ემაილ: \(users[indexPath.row].email) "
-        return cell!
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! ChemiTableViewCell
+        cell.label.text =  "სახელი: \(users[indexPath.row].name) "
+        cell.label1.text = "გვარი: \(users[indexPath.row].lName) "
+        cell.label2.text = "ემაილ: \(users[indexPath.row].email) "
+        cell.label3.text = "სქესი: \(users[indexPath.row].gender) "
+        
+        return cell
     }
 
 }
