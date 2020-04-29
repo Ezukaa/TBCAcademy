@@ -49,11 +49,14 @@ class ViewController: UIViewController {
     @IBAction func toSalaroButton(_ sender: Any) {
         let salaroStoryvoard = UIStoryboard(name: "Main", bundle: nil)
         let  salaroVC = salaroStoryvoard.instantiateViewController(withIdentifier: "SalaroViewController") as! SalaroViewController
-        if let realSalariVC = salaroVC as? SalaroViewController{
-            realSalariVC.raodenoma = count
-            realSalariVC.fasi = totalMoneyPaid
-            realSalariVC.allProducts = allProductsBought
-        }
+//        if let realSalariVC = salaroVC as? SalaroViewController{
+//            realSalariVC.raodenoma = count
+//            realSalariVC.fasi = totalMoneyPaid
+//            realSalariVC.allProducts = allProductsBought
+//        }
+        salaroVC.raodenoma = count
+        salaroVC.fasi = totalMoneyPaid
+        salaroVC.allProducts = allProductsBought
         self.navigationController?.pushViewController(salaroVC, animated: true)
     }
     
