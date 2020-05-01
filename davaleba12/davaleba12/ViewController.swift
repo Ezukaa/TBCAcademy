@@ -9,6 +9,13 @@
 import UIKit
 
 class ViewController: UIViewController,AddStoryDelegate {
+    func editText() {
+        <#code#>
+    }
+    
+    
+
+    
     
     var statiebi:[String] = ["Pirveli Statia ari es"]
 
@@ -29,7 +36,6 @@ class ViewController: UIViewController,AddStoryDelegate {
             realAddStoryPage.delegate = self
         }
         self.navigationController?.pushViewController(addStoryPage, animated: true)
-  
     }
     
     //amit mogvaq info
@@ -72,6 +78,10 @@ extension ViewController: UITableViewDelegate{
         }
         
         let edit = UIContextualAction(style: .normal, title: "Edit") {(action,view,handler) in
+//            self.editText(index: self.statiebi.)
+            self.goToAddStory((Any).self)
+
+            
 //            self.statiebi[indexPath.row] =
             print("amas gavasworeb")
         }
