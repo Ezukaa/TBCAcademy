@@ -9,9 +9,10 @@
 import UIKit
 
 class ViewController: UIViewController, getCarObject {
-    
     var carsArray = [Car]()
     @IBOutlet weak var tableView: UITableView!
+    var ItemToEdit:Car?
+    var indexToEdit:Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,16 +23,24 @@ class ViewController: UIViewController, getCarObject {
         tableView.setContentOffset(.zero, animated: true)
     }
 
-    @IBAction func toMeorePageButton(_ sender: UIBarButtonItem) {
+    @IBAction func toMeorePageButton(_ sender: AnyObject?) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let merePage = storyboard.instantiateViewController(withIdentifier: "MeorePageID")
         if let unWrappedMeorePage = merePage as? MeorePage{
             unWrappedMeorePage.carDelegate = self
+            if ItemToEdit != nil{
+                unWrappedMeorePage.carToEdit = ItemToEdit
+                unWrappedMeorePage.indexToEdit = self.indexToEdit
+            }
+            
         }
         self.navigationController?.pushViewController(merePage, animated: true)
     }
-    
-    
+    func editCarTable(carObject: Car) {
+        carsArray.remove(at: indexToEdit!)
+        tableView.reloadData()
+        indexToEdit = nil
+    }
     func newCarObject(carObject: Car) {
         carsArray.append(carObject)
         tableView.reloadData()
@@ -54,6 +63,21 @@ class ViewController: UIViewController, getCarObject {
 
 
 extension ViewController:UITableViewDelegate{
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let delete = UIContextualAction(style: .destructive, title: "Delete") {(action,view,handler) in
+            self.carsArray.remove(at: indexPath.row)
+            tableView.reloadData()
+        }
+        
+        let edit = UIContextualAction(style: .normal, title: "Edit") {(action,view,handler) in
+//            self.goToAddStory((Any).self)
+                self.ItemToEdit = self.carsArray[indexPath.row]
+                self.indexToEdit = indexPath.row
+            self.toMeorePageButton(nil)
+        }
+        let config = UISwipeActionsConfiguration(actions: [delete,edit])
+        return config
+    }
     
 }
 extension ViewController:UITableViewDataSource{
