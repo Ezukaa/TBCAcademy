@@ -38,6 +38,7 @@ class ViewController: UIViewController, getCarObject {
     }
     func editCarTable(carObject: Car) {
         carsArray.remove(at: indexToEdit!)
+        carsArray.insert(carObject, at: indexToEdit!)
         tableView.reloadData()
         indexToEdit = nil
     }

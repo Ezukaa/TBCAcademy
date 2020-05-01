@@ -46,6 +46,7 @@ class MeorePage: UIViewController {
             carToEdit = nil
             self.navigationController?.popViewController(animated: true)
             buttonText.setTitle("დამატება", for: .normal)
+            return
         }
         carDelegate?.newCarObject(carObject: newCar)
     }
