@@ -36,7 +36,6 @@ class MeorePage: UIViewController {
 }
 extension MeorePage:UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(indexPath.row)
         if(indexPath.row==0){self.picture="car1"}
         else{picture="car2"}
     }

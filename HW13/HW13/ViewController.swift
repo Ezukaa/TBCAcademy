@@ -18,6 +18,9 @@ class ViewController: UIViewController, getCarObject {
         tableView.dataSource = self
         tableView.delegate = self
     }
+    override func viewDidAppear(_ animated: Bool) {
+        tableView.setContentOffset(.zero, animated: true)
+    }
 
     @IBAction func toMeorePageButton(_ sender: UIBarButtonItem) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
