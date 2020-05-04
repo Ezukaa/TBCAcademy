@@ -10,10 +10,18 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    var firstOrSecond = 0
+    
     let firstView:UIView = {
        let f = UIView()
         f.translatesAutoresizingMaskIntoConstraints = false
         f.backgroundColor = .red
+        return f
+    }()
+    let SecondView:UIView = {
+        let f = UIView()
+        f.translatesAutoresizingMaskIntoConstraints = false
+        f.backgroundColor = .black
         return f
     }()
     
@@ -119,9 +127,8 @@ class ViewController: UIViewController {
         //FirstView(Last Thing to do)
         view.addSubview(firstView)
         NSLayoutConstraint.activate([
-    
-            
             ])
+        view.addSubview(SecondView)
         
         //TextField1
         view.addSubview(textField1)
@@ -182,12 +189,18 @@ class ViewController: UIViewController {
     
     var firstViewHeight: NSLayoutConstraint?
     var firstViewWidth: NSLayoutConstraint?
-    var changeW: NSLayoutConstraint!
-    var changeA:NSLayoutConstraint!
+    var secondViewHeight: NSLayoutConstraint?
+    var secondViewWidth: NSLayoutConstraint?
+    var changeS2: NSLayoutConstraint!
+    var changeD2:NSLayoutConstraint!
     var changeS:NSLayoutConstraint!
     var changeD:NSLayoutConstraint!
     
     override func viewDidLoad() {
+        firstView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(firstSelected)))
+        SecondView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(secondSelected)))
+        
+        
         super.viewDidLoad()
         print("Chairto")
         firstViewWidth = firstView.widthAnchor.constraint(equalToConstant: 60)
@@ -196,13 +209,30 @@ class ViewController: UIViewController {
         firstViewHeight = firstView.heightAnchor.constraint(equalToConstant: 60)
         firstViewHeight?.isActive = true
         
+        secondViewWidth = firstView.widthAnchor.constraint(equalToConstant: 60)
+        secondViewWidth?.isActive = true
+        
+        secondViewHeight = firstView.heightAnchor.constraint(equalToConstant: 60)
+        secondViewHeight?.isActive = true
+        
+        
+        
         
         //aq ver vxvdebi rato iwkebs safe areadan atvlas. view maqvs gawerili
+    
         changeS = NSLayoutConstraint(item: firstView, attribute: .top, relatedBy: .equal, toItem: view, attribute: .top, multiplier: 1, constant: 0)
         self.view.addConstraint(changeS)
         
         changeD = NSLayoutConstraint(item: firstView, attribute: .leading, relatedBy: .equal, toItem: view, attribute: .leading, multiplier: 1, constant: 0)
         self.view.addConstraint(changeD)
+        
+        
+        changeS2 = NSLayoutConstraint(item: SecondView, attribute: .top, relatedBy: .equal, toItem: view, attribute: .top, multiplier: 1, constant: 0)
+        self.view.addConstraint(changeS)
+        
+        changeD2 = NSLayoutConstraint(item: SecondView, attribute: .trailing, relatedBy: .equal, toItem: view, attribute: .trailing, multiplier: 1, constant: 0)
+        self.view.addConstraint(changeD)
+    
         
     }
 
@@ -215,9 +245,13 @@ class ViewController: UIViewController {
     
     
     @objc func onButton(){
+        if selectedView == 1 {
         firstViewWidth?.constant = CGFloat(Int(textField1.text!) ?? 0)
         firstViewHeight?.constant = CGFloat(Int(textField2.text!) ?? 0)
         print(textField1.text!)
+        }else if selectedView == 2{
+            
+        }
     }
     
     
@@ -247,6 +281,17 @@ class ViewController: UIViewController {
     }
     @objc func onSlider(){
         firstViewHeight?.constant = CGFloat(Int(slider.value))
+    }
+    
+    
+    var selectedView = 0
+    @objc func firstSelected() {
+        selectedView = 1
+        print(selectedView)
+    }
+    
+    @objc func secondSelected() {
+        selectedView = 2
     }
 
 }
