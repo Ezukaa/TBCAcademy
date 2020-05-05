@@ -33,11 +33,24 @@ class ViewController: UIViewController {
     
     @objc func onImageTap(){
     print("Daewira")
-        print(selectedPicture)
+        
         let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-        let secondPage = storyBoard.instantiateViewController(withIdentifier: "SecondPageID")
+        let secondPage = storyBoard.instantiateViewController(withIdentifier: "SecondPageID") as! SecondPageViewController
+        
+        switch selectedPicture {
+        case -1:
+            showAlert(title: "Ras aketeb??", message: "Surati Monishne")
+        default:
+           secondPage.selectedInex = selectedPicture
+        }
         
         self.navigationController?.pushViewController(secondPage, animated: true)
+    }
+    
+    func showAlert(title:String, message:String){
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Gavige", style: .cancel, handler: nil))
+        self.present(alert,animated: true)
     }
 }
 
