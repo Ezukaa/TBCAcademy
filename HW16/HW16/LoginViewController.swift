@@ -13,7 +13,13 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var login_name_field: UITextField!
     @IBOutlet weak var login_pass_field: UITextField!
     
-    
+    override func loadView() {
+        super.loadView()
+        if UDManager.getIsOnMainPage(){
+            let mainPage = StoryBoard().instantiateViewController(withIdentifier: "ViewControllerID")
+            self.navigationController?.pushViewController(mainPage, animated: true)
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,10 +28,7 @@ class LoginViewController: UIViewController {
         print(UDManager.getFirstName())
         print(UDManager.getPassword())
         
-        if UDManager.getIsOnMainPage(){
-            let mainPage = StoryBoard().instantiateViewController(withIdentifier: "ViewControllerID")
-            self.navigationController?.pushViewController(mainPage, animated: true)
-        }
+        
     }
     
     @IBAction func onLogin(_ sender: UIButton) {

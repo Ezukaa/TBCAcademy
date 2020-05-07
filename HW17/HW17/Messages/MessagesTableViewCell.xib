@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MessagesTableViewCell" rowHeight="118" id="KGk-i7-Jjw" customClass="MessagesTableViewCell" customModule="HW17" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="98"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="97.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic.contacts" translatesAutoresizingMaskIntoConstraints="NO" id="N00-OG-Dx4">
+                        <rect key="frame" x="10" y="25" width="48" height="48"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="48" id="TSf-Qc-ZSr"/>
+                            <constraint firstAttribute="width" constant="48" id="dFX-pg-fd9"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Giorgi Ezugbaia" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hwl-KS-yw3">
+                        <rect key="frame" x="94" y="11" width="210" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="MwQ-zt-knF"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OQo-if-VFs">
+                        <rect key="frame" x="94" y="40" width="210" height="33"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="33" id="SrZ-KU-fh9"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Hwl-KS-yw3" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="A2l-zG-4LK"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="OQo-if-VFs" secondAttribute="bottom" constant="14" id="Hsu-Ub-5Io"/>
+                    <constraint firstItem="Hwl-KS-yw3" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="IVH-Y4-i6W"/>
+                    <constraint firstItem="Hwl-KS-yw3" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="RUJ-w0-BfN"/>
+                    <constraint firstItem="N00-OG-Dx4" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="S6L-jl-As3"/>
+                    <constraint firstItem="Hwl-KS-yw3" firstAttribute="leading" secondItem="N00-OG-Dx4" secondAttribute="trailing" constant="36" id="W99-r2-FfP"/>
+                    <constraint firstItem="OQo-if-VFs" firstAttribute="top" secondItem="Hwl-KS-yw3" secondAttribute="bottom" constant="8" id="Xpy-MX-7mO"/>
+                    <constraint firstItem="N00-OG-Dx4" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="aOL-S4-mVA"/>
+                    <constraint firstItem="OQo-if-VFs" firstAttribute="leading" secondItem="Hwl-KS-yw3" secondAttribute="leading" id="eW1-zG-kjg"/>
+                    <constraint firstItem="OQo-if-VFs" firstAttribute="trailing" secondItem="Hwl-KS-yw3" secondAttribute="trailing" id="z7J-5C-h6G"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="messageField" destination="OQo-if-VFs" id="XXo-7D-g1F"/>
+                <outlet property="nameField" destination="Hwl-KS-yw3" id="35e-Zz-4Kk"/>
+                <outlet property="pictureField" destination="N00-OG-Dx4" id="Smd-Io-b09"/>
+            </connections>
+            <point key="canvasLocation" x="-46" y="140"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="ic.contacts" width="48" height="48"/>
+    </resources>
+</document>
