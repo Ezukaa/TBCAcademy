@@ -17,12 +17,20 @@ class FirstPageViewController: UIViewController, SecondPageProtocol {
         "აჩვენებს მარცხნივ გაწეულ სელს საიდანაც შემიძლია ამოვირჩიო “edit” - რედაქტირება და “delete” წაშლის ღილაკებიდან ერთერთი"
 ]
     
+    let fm = CustomFileManager.shared
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tableView.register(FirstTableViewCell.nib(), forCellReuseIdentifier: FirstTableViewCell.identifier)
         tableView.delegate = self
         tableView.dataSource = self
+        
+        //fm.createFile(name: "GG", text: "AAAAAAAAA")
+        
+        
+        
     }
     @IBAction func onBarAdd(_ sender: Any) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
@@ -44,6 +52,17 @@ class FirstPageViewController: UIViewController, SecondPageProtocol {
     }
     
 }
+
+
+
+
+
+
+
+
+
+
+
 
 extension FirstPageViewController:UITableViewDelegate{
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
@@ -79,8 +98,55 @@ extension FirstPageViewController:UITableViewDataSource{
         cell.textDisplayed.text = arrayOFMessages[indexPath.row]
         return cell
         
+        
     }
+    
+    
 }
 
 
 
+class CustomFileManager{
+    let fm = FileManager.default
+    
+    static let shared = CustomFileManager()
+    private init() {}
+    
+    var mainPath: URL{
+        return try! fm.url(for: .applicationSupportDirectory, in: .allDomainsMask, appropriateFor: nil, create: false)
+    }
+    
+    func createDictionary(name:String){
+        let path = mainPath.appendingPathComponent(name)
+        
+        do {
+            try fm.createDirectory(at: path, withIntermediateDirectories: false, attributes: nil)
+        }catch let err{
+            print(err)
+        }
+    }
+    
+    func createFile(name:String, text:String){
+        let path = mainPath.appendingPathComponent("\(name).txt")
+        
+        do{
+            try text.write(to: path, atomically: true, encoding: .utf8)
+        }catch let err{
+            print(err)
+        }
+    }
+    func contentsOfURL(url: URL) -> [URL] {
+        return try! fm.contentsOfDirectory(at: url, includingPropertiesForKeys: nil, options: .skipsHiddenFiles)
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+}

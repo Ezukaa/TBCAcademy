@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  HW18
+//  HW19
 //
-//  Created by Macintosh HD on 5/8/20.
+//  Created by Macintosh HD on 5/11/20.
 //  Copyright © 2020 TBC. All rights reserved.
 //
 
@@ -39,8 +39,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
-//        let page = FirstPageViewController()
-//        page.saveData()
     }
 
 
