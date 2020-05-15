@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14460.32" systemVersion="17G12034" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Reg_User" representedClassName="Reg_User" syncable="YES" codeGenerationType="class">
+        <attribute name="userEmail" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userLastName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userPassword" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userPhoto" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="userRealName" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="userPosts" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="User_Post" inverseName="user" inverseEntity="User_Post" syncable="YES"/>
+    </entity>
+    <entity name="User_Post" representedClassName="User_Post" syncable="YES" codeGenerationType="class">
+        <attribute name="dateOfCreation" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="postContent" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Reg_User" inverseName="userPosts" inverseEntity="Reg_User" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Reg_User" positionX="-135.609375" positionY="31.30078125" width="115.94140625" height="150"/>
+        <element name="User_Post" positionX="139.9453125" positionY="9.43359375" width="128" height="90"/>
+    </elements>
+</model>
