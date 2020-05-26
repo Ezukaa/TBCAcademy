@@ -9,7 +9,8 @@
 import UIKit
 
 class ViewController: UIViewController {
-    var safeButton = DispatchQueue(label: "")
+    @IBOutlet weak var safeButton: UIButton!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,12 +31,20 @@ class ViewController: UIViewController {
     
     
     @IBAction func onButton(_ sender: UIButton) {
+        let currentColor = self.safeButton.currentTitleColor
         
+        self.safeButton.isUserInteractionEnabled = false
+        self.safeButton.setTitleColor(.red, for: .normal)
             let queue = DispatchQueue(label: "")
-            queue.async {
-                self.safeButton.sync {
+            let group = DispatchGroup()
+        queue.async(group:group) {
+            
                 self.printNumbers()
-                }
+        }
+        group.notify(queue: .main){
+            print("morcha")
+            self.safeButton.isUserInteractionEnabled = true
+            self.safeButton.setTitleColor(currentColor, for: .normal)
         }
         
         
