@@ -3,11 +3,13 @@
     <entity name="FavJobs" representedClassName="FavJobs" syncable="YES" codeGenerationType="class">
         <attribute name="compLogo" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="compName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="jobLocation" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="jobTitle" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="jobType" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="url" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="FavJobs" positionX="-63" positionY="-18" width="128" height="120"/>
+        <element name="FavJobs" positionX="-63" positionY="-18" width="128" height="150"/>
     </elements>
 </model>

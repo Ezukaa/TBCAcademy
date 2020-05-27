@@ -22,10 +22,6 @@
                                 <rect key="frame" x="0.0" y="88" width="375" height="56"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="NAi-sI-n4k">
-                                <rect key="frame" x="0.0" y="144" width="375" height="604"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XLi-Sf-2DO">
                                 <rect key="frame" x="0.0" y="748" width="187.66666666666666" height="30"/>
                                 <state key="normal" title="Pervious Page"/>
@@ -40,6 +36,10 @@
                                     <action selector="onNextPage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gma-de-Pkq"/>
                                 </connections>
                             </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="NAi-sI-n4k">
+                                <rect key="frame" x="0.0" y="144" width="375" height="604"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -71,22 +71,23 @@
                         <outlet property="safePerviousPage" destination="XLi-Sf-2DO" id="V0E-lI-wYP"/>
                         <outlet property="searchBar" destination="Hgg-On-XKs" id="DpD-w0-UPB"/>
                         <outlet property="tableView" destination="NAi-sI-n4k" id="URh-Ko-pjk"/>
+                        <segue destination="1dR-sJ-HJi" kind="push" id="DOO-FW-yqI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1072.8" y="132.26600985221674"/>
         </scene>
-        <!--Favorite Page View-->
+        <!--My Favorites-->
         <scene sceneID="FhA-wf-eAt">
             <objects>
-                <viewController storyboardIdentifier="DetailsPageView" id="1dR-sJ-HJi" customClass="FavoritePageView" customModule="Project_N1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FavoritePageView" id="1dR-sJ-HJi" customClass="FavoritePageView" customModule="Project_N1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hyW-Ub-cqc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hcp-0c-gbj">
-                                <rect key="frame" x="0.0" y="44" width="375" height="734"/>
+                                <rect key="frame" x="0.0" y="88" width="375" height="690"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                         </subviews>
@@ -99,6 +100,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="g5t-n9-Prk"/>
                     </view>
+                    <navigationItem key="navigationItem" title="My Favorites" id="jW1-0J-Y6F"/>
+                    <connections>
+                        <outlet property="tableView" destination="hcp-0c-gbj" id="HXv-Fi-FZy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Eas-xX-pJm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

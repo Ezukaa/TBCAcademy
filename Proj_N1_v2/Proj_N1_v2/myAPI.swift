@@ -1,8 +1,8 @@
 //
 //  myAPI.swift
-//  Project_N1
+//  Proj_N1_v2
 //
-//  Created by Macintosh HD on 5/26/20.
+//  Created by Macintosh HD on 5/27/20.
 //  Copyright © 2020 TBC. All rights reserved.
 //
 
@@ -41,24 +41,27 @@ typealias JobsResponse = [JobsResponseElement]
 
 
 struct APIResponse {
-    func getCountryInfo(page:Int,desc:String,completion: @escaping ([JobsResponseElement])->()){
+   
+    
+    mutating func getWholeInfo(completion: @escaping ([JobsResponseElement])->()){
         
-        guard let url = URL(string: "https://jobs.github.com/positions.json?description=\(desc)&page=\(page)") else{return}
+        
+        guard let url = URL(string: "https://jobs.github.com/positions.json?") else{return}
         
         URLSession.shared.dataTask(with: url){(data,res,err) in
-            guard let data = data else{return}
             
+            guard let data = data else{return}
             do{
                 let decoder = JSONDecoder()
                 let response = try decoder.decode([JobsResponseElement].self, from: data)
                 
                 completion(response)
-                
             }catch{print(error.localizedDescription)}
-            
-            
             }.resume()
+        
     }
-
+    
+    
     
 }
+

@@ -17,8 +17,8 @@
 		0E08B7BB247D45D200D53823 /* FirstPageTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E08B7B9247D45D200D53823 /* FirstPageTableCell.swift */; };
 		0E08B7BC247D45D200D53823 /* FirstPageTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E08B7BA247D45D200D53823 /* FirstPageTableCell.xib */; };
 		0E1A2B0C247D80FA0082F9B7 /* FavoritePageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1A2B0B247D80FA0082F9B7 /* FavoritePageView.swift */; };
-		0E1A2B10247D8BE60082F9B7 /* favPageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1A2B0E247D8BE60082F9B7 /* favPageCell.swift */; };
-		0E1A2B11247D8BE60082F9B7 /* favPageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E1A2B0F247D8BE60082F9B7 /* favPageCell.xib */; };
+		0EE04141247EAB5700B14348 /* favPageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE0413F247EAB5700B14348 /* favPageCell.swift */; };
+		0EE04142247EAB5700B14348 /* favPageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0EE04140247EAB5700B14348 /* favPageCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,8 +34,8 @@
 		0E08B7B9247D45D200D53823 /* FirstPageTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstPageTableCell.swift; sourceTree = "<group>"; };
 		0E08B7BA247D45D200D53823 /* FirstPageTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FirstPageTableCell.xib; sourceTree = "<group>"; };
 		0E1A2B0B247D80FA0082F9B7 /* FavoritePageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritePageView.swift; sourceTree = "<group>"; };
-		0E1A2B0E247D8BE60082F9B7 /* favPageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = favPageCell.swift; sourceTree = "<group>"; };
-		0E1A2B0F247D8BE60082F9B7 /* favPageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = favPageCell.xib; sourceTree = "<group>"; };
+		0EE0413F247EAB5700B14348 /* favPageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = favPageCell.swift; sourceTree = "<group>"; };
+		0EE04140247EAB5700B14348 /* favPageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = favPageCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,8 +95,8 @@
 			isa = PBXGroup;
 			children = (
 				0E1A2B0B247D80FA0082F9B7 /* FavoritePageView.swift */,
-				0E1A2B0E247D8BE60082F9B7 /* favPageCell.swift */,
-				0E1A2B0F247D8BE60082F9B7 /* favPageCell.xib */,
+				0EE0413F247EAB5700B14348 /* favPageCell.swift */,
+				0EE04140247EAB5700B14348 /* favPageCell.xib */,
 			);
 			path = FavoritePage;
 			sourceTree = "<group>";
@@ -162,7 +162,7 @@
 				0E08B7BC247D45D200D53823 /* FirstPageTableCell.xib in Resources */,
 				0E08B7AB247D189600D53823 /* LaunchScreen.storyboard in Resources */,
 				0E08B7A8247D189600D53823 /* Assets.xcassets in Resources */,
-				0E1A2B11247D8BE60082F9B7 /* favPageCell.xib in Resources */,
+				0EE04142247EAB5700B14348 /* favPageCell.xib in Resources */,
 				0E08B7A3247D189400D53823 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -175,7 +175,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0E08B7A6247D189400D53823 /* Project_N1.xcdatamodeld in Sources */,
-				0E1A2B10247D8BE60082F9B7 /* favPageCell.swift in Sources */,
+				0EE04141247EAB5700B14348 /* favPageCell.swift in Sources */,
 				0E08B7BB247D45D200D53823 /* FirstPageTableCell.swift in Sources */,
 				0E1A2B0C247D80FA0082F9B7 /* FavoritePageView.swift in Sources */,
 				0E08B7A0247D189400D53823 /* ViewController.swift in Sources */,

@@ -16,9 +16,11 @@ class ViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
     var jobsArray = [JobsResponseElement]()
+    var coreDataArray = [FavJobs]()
     var currentPage = 1
     
     var jobToSearch = ""
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +31,8 @@ class ViewController: UIViewController {
         jobsResponse()
         
         fetch()
+        
+      
     }
     @IBAction func onPerviousPage(_ sender: UIButton) {
         safeNextPage.isUserInteractionEnabled = true
@@ -59,7 +63,10 @@ class ViewController: UIViewController {
     }
     
     @IBAction func toFavoritePage(_ sender: UIBarButtonItem) {
-        print("Not Done Yet")
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let favPage = storyboard.instantiateViewController(withIdentifier: "FavoritePageView") as! FavoritePageView
+        
+        self.navigationController?.pushViewController(favPage, animated: true)
     }
     
     
@@ -72,13 +79,14 @@ class ViewController: UIViewController {
             }
         }
     }
+    
+    
     func fetch(){
         let context = AppDelegate.CoreDataContainer.viewContext
         let request : NSFetchRequest<FavJobs> = FavJobs.fetchRequest()
         do{
             let result = try context.fetch(request)
-            
-            print(result.count)
+            self.coreDataArray = result
         }catch{}
     }
     }
@@ -102,24 +110,38 @@ extension ViewController:UITableViewDelegate{
         let jobURL = currentJob.url
         UIApplication.shared.open(URL(string: jobURL)! as URL, options: [:], completionHandler: nil )
     }
+    
+    
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let add = UIContextualAction(style: .normal, title: "Add") {(action,view,handler) in
+            
+            //ese gadavaoete
+            for i in 0..<self.coreDataArray.count{
+                if self.coreDataArray[i].id == self.jobsArray[indexPath.row].id{
+                    print("udirs")
+                    return
+                }
+            }
+            
             let context = AppDelegate.CoreDataContainer.viewContext
             let job = FavJobs(context: context)
-            
-        
-            
+
+
+
             job.compLogo = self.jobsArray[indexPath.row].companyLogo
             job.compName = self.jobsArray[indexPath.row].company
             job.jobLocation = self.jobsArray[indexPath.row].location
             job.jobTitle = self.jobsArray[indexPath.row].title
             job.jobType = self.jobsArray[indexPath.row].type.rawValue
-            
+            job.id = self.jobsArray[indexPath.row].id
+            job.url = self.jobsArray[indexPath.row].url
+
             do{
                 try context.save()
                 print("SAVED!")
+                self.fetch()
             }catch{print(error.localizedDescription)}
-        }
+       }
         let config = UISwipeActionsConfiguration(actions: [add])
         return config
     }
