@@ -5,7 +5,6 @@
 //  Created by Macintosh HD on 5/20/20.
 //  Copyright © 2020 TBC. All rights reserved.
 //
-
 import Foundation
 
 struct CountriesResponse: Codable {
@@ -13,7 +12,7 @@ struct CountriesResponse: Codable {
     let capital:String
     let currencies:[Currency]
     let borders:[String]
-
+    
 }
 
 struct Currency: Codable {
@@ -27,20 +26,20 @@ struct APIResponse {
         
         guard let url = URL(string: "https://restcountries.eu/rest/v2/name/\(countryName)") else{return}
         
-    URLSession.shared.dataTask(with: url){(data,res,err) in
-        guard let data = data else{return}
-        
-        do{
-            let decoder = JSONDecoder()
-            let response = try decoder.decode([CountriesResponse].self, from: data)
+        URLSession.shared.dataTask(with: url){(data,res,err) in
+            guard let data = data else{return}
             
-            completion(response)
+            do{
+                let decoder = JSONDecoder()
+                let response = try decoder.decode([CountriesResponse].self, from: data)
+                
+                completion(response)
+                
+            }catch{print(error.localizedDescription)}
             
-        }catch{print(error.localizedDescription)}
-        
-        
-        }.resume()
-}
+            
+            }.resume()
+    }
     func getCountryInfo2(countryName:String, completion: @escaping ([CountriesResponse])->()){
         
         guard let url = URL(string: "https://restcountries.eu/rest/v2/capital/\(countryName)") else{return}
@@ -83,7 +82,5 @@ struct APIResponse {
             
         }
         task.resume()
+    }
 }
-}
-
-
