@@ -32,7 +32,7 @@ class ViewController: UIViewController {
         
         UIView.animate(withDuration: 1, delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 1, options: [], animations: {
             imageView.frame.origin.y -= 200
-            //imageView.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
+            
         }) { (end) in
             UIView.transition(with: imageView, duration: 2, options: .transitionFlipFromBottom, animations: {}, completion: nil)
             
