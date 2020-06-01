@@ -78,6 +78,60 @@
             </objects>
             <point key="canvasLocation" x="1072.8" y="132.26600985221674"/>
         </scene>
+        <!--Detailed Page-->
+        <scene sceneID="SeI-DC-mgu">
+            <objects>
+                <viewController storyboardIdentifier="DetailedPage" id="bfv-WP-h46" customClass="DetailedPage" customModule="Project_N1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vz1-N0-4N7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cK3-Gc-dtb">
+                                <rect key="frame" x="0.0" y="44" width="375" height="734"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1vk-LY-Jpb">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="20.333333333333332"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qdd-4N-H7A">
+                                        <rect key="frame" x="0.0" y="30.333333333333329" width="375" height="30"/>
+                                        <state key="normal" title="Go to our site!"/>
+                                        <connections>
+                                            <action selector="toURLTap:" destination="bfv-WP-h46" eventType="touchUpInside" id="30D-Lf-GIC"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Qdd-4N-H7A" firstAttribute="top" secondItem="1vk-LY-Jpb" secondAttribute="bottom" constant="10" id="1r6-kS-SFN"/>
+                                    <constraint firstItem="1vk-LY-Jpb" firstAttribute="width" secondItem="cK3-Gc-dtb" secondAttribute="width" id="DsH-1r-Shn"/>
+                                    <constraint firstAttribute="bottom" secondItem="Qdd-4N-H7A" secondAttribute="bottom" constant="8" id="MeG-3Z-9WW"/>
+                                    <constraint firstItem="Qdd-4N-H7A" firstAttribute="leading" secondItem="cK3-Gc-dtb" secondAttribute="leading" id="b48-ou-vG6"/>
+                                    <constraint firstAttribute="trailing" secondItem="1vk-LY-Jpb" secondAttribute="trailing" id="coK-jA-FDr"/>
+                                    <constraint firstAttribute="trailing" secondItem="Qdd-4N-H7A" secondAttribute="trailing" id="kKh-XJ-rZi"/>
+                                    <constraint firstItem="1vk-LY-Jpb" firstAttribute="top" secondItem="cK3-Gc-dtb" secondAttribute="top" id="sC1-Xq-kRm"/>
+                                    <constraint firstItem="1vk-LY-Jpb" firstAttribute="leading" secondItem="cK3-Gc-dtb" secondAttribute="leading" id="x8T-NV-Pm8"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="cK3-Gc-dtb" firstAttribute="top" secondItem="hAv-6O-Xae" secondAttribute="top" id="AyN-nX-MAJ"/>
+                            <constraint firstItem="cK3-Gc-dtb" firstAttribute="bottom" secondItem="hAv-6O-Xae" secondAttribute="bottom" id="Npk-Pr-5XB"/>
+                            <constraint firstItem="cK3-Gc-dtb" firstAttribute="leading" secondItem="hAv-6O-Xae" secondAttribute="leading" id="T2B-XU-UYF"/>
+                            <constraint firstItem="cK3-Gc-dtb" firstAttribute="trailing" secondItem="hAv-6O-Xae" secondAttribute="trailing" id="arx-m9-aYr"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="hAv-6O-Xae"/>
+                    </view>
+                    <connections>
+                        <outlet property="detailedText" destination="1vk-LY-Jpb" id="jJo-Gi-nDM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oda-ef-CRb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1904.8" y="580.78817733990149"/>
+        </scene>
         <!--My Favorites-->
         <scene sceneID="FhA-wf-eAt">
             <objects>

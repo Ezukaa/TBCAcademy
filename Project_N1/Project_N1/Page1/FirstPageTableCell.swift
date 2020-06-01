@@ -33,12 +33,23 @@ class FirstPageTableCell: UITableViewCell {
             })
             }
         }
+    
+ 
         
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        let panGesture = UILongPressGestureRecognizer(target: self,
+                                                action: #selector(gestureAction))
+        addGestureRecognizer(panGesture)
     }
+    @objc func gestureAction() {
+        //SAITZE GADASVLA
+        print("Shemovida")
+        let currentJobURL = self.currentCompany!.url
+        UIApplication.shared.open(URL(string: currentJobURL)! as URL, options: [:], completionHandler: nil )
+    }
+    
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)

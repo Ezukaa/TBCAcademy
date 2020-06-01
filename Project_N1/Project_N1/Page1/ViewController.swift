@@ -106,16 +106,20 @@ extension ViewController:UITableViewDataSource{
 }
 extension ViewController:UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let currentJob = self.jobsArray[indexPath.row]
-        let jobURL = currentJob.url
-        UIApplication.shared.open(URL(string: jobURL)! as URL, options: [:], completionHandler: nil )
+
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let detailsPage = storyboard.instantiateViewController(withIdentifier: "DetailedPage") as! DetailedPage
+        detailsPage.currentJob = self.jobsArray[indexPath.row]
+       
+        
+        self.navigationController?.pushViewController(detailsPage, animated: true)
     }
     
     
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let add = UIContextualAction(style: .normal, title: "Add") {(action,view,handler) in
             
-            //ese gadavaoete
+
             for i in 0..<self.coreDataArray.count{
                 if self.coreDataArray[i].id == self.jobsArray[indexPath.row].id{
                     print("udirs")
@@ -126,15 +130,16 @@ extension ViewController:UITableViewDelegate{
             let context = AppDelegate.CoreDataContainer.viewContext
             let job = FavJobs(context: context)
 
-
-
-            job.compLogo = self.jobsArray[indexPath.row].companyLogo
+            
             job.compName = self.jobsArray[indexPath.row].company
             job.jobLocation = self.jobsArray[indexPath.row].location
             job.jobTitle = self.jobsArray[indexPath.row].title
             job.jobType = self.jobsArray[indexPath.row].type.rawValue
             job.id = self.jobsArray[indexPath.row].id
             job.url = self.jobsArray[indexPath.row].url
+            self.jobsArray[indexPath.row].companyLogo?.downloadImage(completion: { (image) in
+                job.compLogo = image?.pngData()
+            })
 
             do{
                 try context.save()

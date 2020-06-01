@@ -26,13 +26,14 @@ class favPageCell: UITableViewCell {
             companyLocation.text = currentCompany.jobLocation
             jobType.text = currentCompany.jobType
             mainTitle.text = currentCompany.jobTitle
-            currentCompany.compLogo?.downloadImage(completion: { (image) in
-                DispatchQueue.main.sync {
-                    self.comapyLogo.image = image
-                }
-            })
+            if let binartImage = currentCompany.compLogo{
+                self.comapyLogo.image = UIImage(data: binartImage)
+            }
+            
         }
     }
+    
+    // modi machvene scenari sadac bug aris 
     
     
     

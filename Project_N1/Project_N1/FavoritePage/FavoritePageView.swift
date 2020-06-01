@@ -38,7 +38,7 @@ class FavoritePageView: UIViewController {
             try context.save()
         }catch{print(error.localizedDescription)}
     }
-
+    
 }
 extension FavoritePageView: UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -48,26 +48,33 @@ extension FavoritePageView: UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: favPageCell.identifier, for: indexPath) as! favPageCell
         cell.currentCompany = coreDataArray[indexPath.row]
+        if coreDataArray[indexPath.row].compLogo == nil {
+            cell.comapyLogo.image = nil
+        }
+        
         return cell
     }
 }
 extension FavoritePageView: UITableViewDelegate{
-        func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-            let currentJob = self.coreDataArray[indexPath.row]
-            let jobURL = currentJob.url
-            UIApplication.shared.open(URL(string: jobURL ?? "")! as URL, options: [:], completionHandler: nil )
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let currentJob = self.coreDataArray[indexPath.row]
+        if let jobURL = currentJob.url{
+            UIApplication.shared.open(URL(string: jobURL)! as URL, options: [:], completionHandler: nil )
         }
-    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        return true
     }
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let delete = UIContextualAction(style: .destructive, title: "Delete") {(action,view,handler) in
             
+
             self.deleteCoreData(currJob: self.coreDataArray[indexPath.row])
+
+            self.coreDataArray.remove(at: indexPath.row)
             
+
             self.tableView.reloadData()
-    }
+            
+        }
         let config = UISwipeActionsConfiguration(actions: [delete])
         return config
-}
+    }
 }
