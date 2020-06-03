@@ -10,6 +10,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         print("SHEMOVIDA")
         
+        
         var sandro: Person?
         var developer: Job?
         
