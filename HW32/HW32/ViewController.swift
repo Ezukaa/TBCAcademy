@@ -80,7 +80,7 @@ class ViewController: UIViewController {
     func currentTime() -> String{
         let date = Date()
         let formatter = DateFormatter()
-        formatter.dateFormat = "dd - MM - yy"
+        formatter.dateFormat = "dd - MM - yy       HH:mm:ss"
         let result = formatter.string(from: date)
         return result
     }
