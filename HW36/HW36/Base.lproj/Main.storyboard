@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Medium.ttf">
+            <string>Roboto-Medium</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="HW36" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Iad-a3-gdh">
+                                <rect key="frame" x="0.0" y="813" width="414" height="49"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CrZ-I5-vIA">
+                                        <rect key="frame" x="0.0" y="9.5" width="118" height="30"/>
+                                        <state key="normal" title="Skip">
+                                            <color key="titleColor" red="0.10980392160000001" green="0.1019607843" blue="0.1019607843" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onSkipTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Pey-mH-xe3"/>
+                                        </connections>
+                                    </button>
+                                    <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="6w3-x2-y5Z">
+                                        <rect key="frame" x="148" y="6" width="118" height="37"/>
+                                        <color key="pageIndicatorTintColor" red="0.58431372549019611" green="0.59607843137254901" blue="0.60392156862745094" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="currentPageIndicatorTintColor" red="0.31764705882352939" green="0.29019607843137252" blue="0.74901960784313726" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </pageControl>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WxT-7A-rip">
+                                        <rect key="frame" x="296" y="9.5" width="118" height="30"/>
+                                        <state key="normal" title="Next">
+                                            <color key="titleColor" red="0.10980392156862745" green="0.10196078431372549" blue="0.10196078431372549" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onNextTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="z5H-rg-35e"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="49" id="2tR-Fc-g4k"/>
+                                </constraints>
+                            </stackView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="tNP-0i-inj">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="2Iw-au-O3F">
+                                    <size key="itemSize" width="408" height="771"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="myCell" reuseIdentifier="myCell" id="oa5-4c-1L0" customClass="myCell" customModule="HW36" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="-1" width="408" height="771"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="408" height="771"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="undraw_add_to_cart_vkjp" translatesAutoresizingMaskIntoConstraints="NO" id="22G-Jp-2kO">
+                                                    <rect key="frame" x="38" y="202" width="332" height="232"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Online shopping" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cqz-0f-GSM">
+                                                    <rect key="frame" x="18" y="497" width="372" height="29"/>
+                                                    <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="24"/>
+                                                    <color key="textColor" red="0.10980392156862745" green="0.10196078431372549" blue="0.10196078431372549" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="txQ-Pz-xYt">
+                                                    <rect key="frame" x="62" y="587" width="284" height="100"/>
+                                                    <string key="text">Women Fashion Shopping Online - Shop from a huge range of latest women clothing, shoes, makeup Kits, Watches, footwear and more for women at best price</string>
+                                                    <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="17"/>
+                                                    <color key="textColor" red="0.4392156862745098" green="0.4392156862745098" blue="0.4392156862745098" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstAttribute="trailingMargin" secondItem="22G-Jp-2kO" secondAttribute="trailing" constant="30" id="820-yI-AHg"/>
+                                            <constraint firstItem="txQ-Pz-xYt" firstAttribute="leading" secondItem="oa5-4c-1L0" secondAttribute="leadingMargin" constant="54" id="XDy-5U-b6K"/>
+                                            <constraint firstItem="cqz-0f-GSM" firstAttribute="leading" secondItem="oa5-4c-1L0" secondAttribute="leadingMargin" constant="10" id="kna-rl-BmC"/>
+                                            <constraint firstItem="22G-Jp-2kO" firstAttribute="top" secondItem="oa5-4c-1L0" secondAttribute="topMargin" constant="150" id="l8f-WT-EFK"/>
+                                            <constraint firstItem="txQ-Pz-xYt" firstAttribute="top" secondItem="cqz-0f-GSM" secondAttribute="bottom" constant="61" id="pRO-uE-1ea"/>
+                                            <constraint firstItem="cqz-0f-GSM" firstAttribute="top" secondItem="22G-Jp-2kO" secondAttribute="bottom" constant="63" id="sfW-Sw-IDZ"/>
+                                            <constraint firstItem="22G-Jp-2kO" firstAttribute="leading" secondItem="oa5-4c-1L0" secondAttribute="leadingMargin" constant="30" id="u6c-kq-7Ib"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="txQ-Pz-xYt" secondAttribute="trailing" constant="54" id="w6K-ka-91U"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="cqz-0f-GSM" secondAttribute="trailing" constant="10" id="wCv-EN-ekH"/>
+                                        </constraints>
+                                        <size key="customSize" width="408" height="771"/>
+                                        <connections>
+                                            <outlet property="desc" destination="txQ-Pz-xYt" id="BEe-rb-fko"/>
+                                            <outlet property="image" destination="22G-Jp-2kO" id="gW5-rU-hI7"/>
+                                            <outlet property="title" destination="cqz-0f-GSM" id="lTw-ol-mYD"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tNP-0i-inj" secondAttribute="trailing" id="2Am-Jt-cOs"/>
+                            <constraint firstItem="tNP-0i-inj" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Fii-QE-E4t"/>
+                            <constraint firstItem="Iad-a3-gdh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="gAm-0G-zuh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Iad-a3-gdh" secondAttribute="trailing" id="nkW-W6-AVk"/>
+                            <constraint firstItem="Iad-a3-gdh" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="o51-4P-wTk"/>
+                            <constraint firstItem="tNP-0i-inj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="u3v-fz-mad"/>
+                            <constraint firstItem="Iad-a3-gdh" firstAttribute="top" secondItem="tNP-0i-inj" secondAttribute="bottom" id="ylX-1x-915"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="tNP-0i-inj" id="ljz-kj-QRN"/>
+                        <outlet property="pageController" destination="6w3-x2-y5Z" id="vdl-hS-wI0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="133.25892857142856"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="undraw_add_to_cart_vkjp" width="302" height="232"/>
+    </resources>
+</document>
