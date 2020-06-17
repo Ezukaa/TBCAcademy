@@ -55,6 +55,10 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="coffee" destination="fr5-sk-8Cf" id="Iuj-Tq-wDe"/>
+                <outlet property="coffeeImageView" destination="0bN-qo-oON" id="CRh-E7-hTM"/>
+            </connections>
             <point key="canvasLocation" x="132.80000000000001" y="172.71364317841082"/>
         </tableViewCell>
     </objects>

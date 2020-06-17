@@ -9,6 +9,13 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    var coffeeArray = ["Espresso","Cappuccino","Macchiato","Mocha","Latte"]
+    var coffeImage = [UIImage(named: "Espresso"),UIImage(named: "cappu"),UIImage(named: "macch"),UIImage(named: "Mocha")]
+    
+    var everyDisplayedObjec:[CellInfo] = []
+    
+    
     @IBOutlet weak var coloredLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     
@@ -17,6 +24,8 @@ class ViewController: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
         tableView.register(myCell.nib(), forCellReuseIdentifier: myCell.identifier)
+        tableView.backgroundColor = .clear
+        tableView.separatorColor = .clear
         
         
         let myString:NSString = "It's Great Day for Coffee."
@@ -27,6 +36,15 @@ class ViewController: UIViewController {
         
         coloredLabel.attributedText = myMutableString
         
+        
+        //MVVM -- axla kovlad usargebloa mainc arafers ar itvlidan view :D
+        for coffee in coffeeArray{
+            for image in coffeImage{
+                everyDisplayedObjec.append(CellInfo(a: coffee, b: image!))
+                break
+            }
+        }
+        
     }
 
 
@@ -34,17 +52,18 @@ class ViewController: UIViewController {
 
 extension ViewController:UITableViewDataSource,UITableViewDelegate{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return everyDisplayedObjec.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: myCell.identifier, for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: myCell.identifier, for: indexPath) as! myCell
+        cell.displayedObject = everyDisplayedObjec[indexPath.row]
         
         return cell
     }
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-    }
+
     
 }
+
+
 
