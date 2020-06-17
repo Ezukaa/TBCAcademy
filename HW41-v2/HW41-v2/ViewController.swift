@@ -11,7 +11,7 @@ import UIKit
 class ViewController: UIViewController {
     
     var coffeeArray = ["Espresso","Cappuccino","Macchiato","Mocha","Latte"]
-    var coffeImage = [UIImage(named: "Espresso"),UIImage(named: "cappu"),UIImage(named: "macch"),UIImage(named: "Mocha")]
+    var coffeImage = [UIImage(named: "Espresso"),UIImage(named: "cappu"),UIImage(named: "macch"),UIImage(named: "Mocha"),UIImage(named: "latte")]
     
     var everyDisplayedObjec:[CellInfo] = []
     
@@ -38,11 +38,8 @@ class ViewController: UIViewController {
         
         
         //MVVM -- axla kovlad usargebloa mainc arafers ar itvlidan view :D
-        for coffee in coffeeArray{
-            for image in coffeImage{
-                everyDisplayedObjec.append(CellInfo(a: coffee, b: image!))
-                break
-            }
+        for i in 0..<coffeeArray.count{
+            everyDisplayedObjec.append(CellInfo(a: coffeeArray[i], b: coffeImage[i]!))
         }
         
     }
