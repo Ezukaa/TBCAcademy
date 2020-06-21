@@ -1,0 +1,16 @@
+PODS:
+  - Localize (2.3.0)
+
+DEPENDENCIES:
+  - Localize (~> 2.3.0)
+
+SPEC REPOS:
+  trunk:
+    - Localize
+
+SPEC CHECKSUMS:
+  Localize: cb1ae53ed73decaad0dce217806ed983091913f5
+
+PODFILE CHECKSUM: 72d288c1204c317d2e2807b442c6a567986be58d
+
+COCOAPODS: 1.9.1

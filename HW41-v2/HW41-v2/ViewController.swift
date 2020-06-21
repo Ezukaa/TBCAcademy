@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Localize
 
 class ViewController: UIViewController {
     
@@ -35,6 +36,7 @@ class ViewController: UIViewController {
         myMutableString.addAttribute(NSAttributedString.Key.foregroundColor, value: UIColor(red: 185/255, green: 136/255, blue: 117/255, alpha: 1), range: NSRange(location:11,length:myString.length-11))
         
         coloredLabel.attributedText = myMutableString
+        
         
         
         //MVVM -- axla kovlad usargebloa mainc arafers ar itvlidan view :D
