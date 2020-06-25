@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>476016088732-2fu334mntc63r9kgr0tls1csq9r3lm5u.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.476016088732-2fu334mntc63r9kgr0tls1csq9r3lm5u</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDJvSrShjDK_xVKaGctiDorADNcGd1SVB0</string>
+	<key>GCM_SENDER_ID</key>
+	<string>476016088732</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>ge.tbcbank.FinalProject</string>
+	<key>PROJECT_ID</key>
+	<string>finalprojectregister</string>
+	<key>STORAGE_BUCKET</key>
+	<string>finalprojectregister.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:476016088732:ios:91442c867e83452fbc7f59</string>
+	<key>DATABASE_URL</key>
+	<string>https://finalprojectregister.firebaseio.com</string>
+</dict>
+</plist>
