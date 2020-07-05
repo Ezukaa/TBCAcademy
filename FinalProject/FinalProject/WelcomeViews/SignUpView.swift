@@ -9,6 +9,7 @@
 import UIKit
 import FirebaseAuth
 
+
 class SignUpView: UIViewController {
     @IBOutlet weak var onGoogle: UIButton!
     @IBOutlet weak var onFacebook: UIButton!
@@ -29,23 +30,23 @@ class SignUpView: UIViewController {
 
     @IBAction func onLogInTap(_ sender: UIButton) {
         let storyBaord = UIStoryboard(name: "Main", bundle: nil)
-        let logInPage = storyBaord.instantiateViewController(withIdentifier: "LogInPage")
-        
+        let logInPage = storyBaord.instantiateViewController(withIdentifier: "LogInPage") as! LogInPage
         self.navigationController?.pushViewController(logInPage, animated: true)
 
     }
     
-    @IBAction func onUserSignUo(_ sender: UIButton) {
+    
+    
+    @IBAction func onUserSignUp(_ sender: UIButton) {
         
         guard let email = userEmail.text, !email.isEmpty,
             let password = userPassword.text, !password.isEmpty else {
-                print("alert gaakete ro aklia texti")
+                showAlert(title: "ტექსტი აკლია", message: "@", currSelf: self)
+                
                 return
         }
         
                 self.showCreateAccount(email: email,password: password)
-
-        print("daregistrirda")
     }
     
     func showCreateAccount(email:String,password:String){
@@ -53,17 +54,24 @@ class SignUpView: UIViewController {
         )
         alert.addAction(UIAlertAction(title: "Continue", style: .default, handler: { _ in
             FirebaseAuth.Auth.auth().createUser(withEmail: email, password: password, completion: { result,error in
-
                 guard error == nil else{
-                    print("ar aketebs")
+                    showAlert(title: "vera", message: "ar daregistrirda", currSelf: self)
                     return
                 }
-                print("shevida")
+                
+                
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                let loginPage = storyboard.instantiateViewController(withIdentifier: loginPageID)
+                self.navigationController?.pushViewController(loginPage, animated: true)
+                
             })
         }))
-        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: {_ in
-            print("ratoo")
-        }))
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+
         present(alert,animated: true)
     }
+    
+    
+    
+    
 }

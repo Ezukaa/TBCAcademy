@@ -10,4 +10,8 @@ target 'FinalProject' do
 pod 'Firebase/Core'
 pod 'Firebase/Auth'
 
+
+#pod 'Bolts'
+#pod ''
+
 end

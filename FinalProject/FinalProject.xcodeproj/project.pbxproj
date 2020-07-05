@@ -17,6 +17,9 @@
 		0ECE3D88249F54E1008D7289 /* FinalProject.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0ECE3D86249F54E1008D7289 /* FinalProject.xcdatamodeld */; };
 		0ECE3D8A249F54E3008D7289 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0ECE3D89249F54E3008D7289 /* Assets.xcassets */; };
 		0ECE3D8D249F54E3008D7289 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0ECE3D8B249F54E3008D7289 /* LaunchScreen.storyboard */; };
+		0ED1585224B1E54000C3B670 /* customAlerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED1585124B1E54000C3B670 /* customAlerts.swift */; };
+		0ED1585524B1E75100C3B670 /* userDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED1585424B1E75100C3B670 /* userDefaults.swift */; };
+		0EEBC7F124B1E25400E96F20 /* StoryBoardIDs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EEBC7F024B1E25400E96F20 /* StoryBoardIDs.swift */; };
 		AFABE6833DCCDAE22826E2E5 /* Pods_FinalProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFEEAEDCD8ECAA7DC689B8F8 /* Pods_FinalProject.framework */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +39,9 @@
 		0ECE3D89249F54E3008D7289 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0ECE3D8C249F54E3008D7289 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0ECE3D8E249F54E3008D7289 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0ED1585124B1E54000C3B670 /* customAlerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customAlerts.swift; sourceTree = "<group>"; };
+		0ED1585424B1E75100C3B670 /* userDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = userDefaults.swift; sourceTree = "<group>"; };
+		0EEBC7F024B1E25400E96F20 /* StoryBoardIDs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryBoardIDs.swift; sourceTree = "<group>"; };
 		49968BB9668C2BAE0F15A28F /* Pods-FinalProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FinalProject.release.xcconfig"; path = "Target Support Files/Pods-FinalProject/Pods-FinalProject.release.xcconfig"; sourceTree = "<group>"; };
 		AFEEAEDCD8ECAA7DC689B8F8 /* Pods_FinalProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FinalProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -94,16 +100,35 @@
 			children = (
 				0E8CEA69249FA9710023E935 /* WelcomeViews */,
 				0E1B38DB249F5EF8007539E0 /* Fonts */,
-				0E1B38D9249F5C8C007539E0 /* GoogleService-Info.plist */,
+				0ED1585324B1E61E00C3B670 /* StoryBoards */,
 				0ECE3D7F249F54E1008D7289 /* AppDelegate.swift */,
-				0ECE3D83249F54E1008D7289 /* Main.storyboard */,
 				0ECE3D89249F54E3008D7289 /* Assets.xcassets */,
-				0ECE3D8B249F54E3008D7289 /* LaunchScreen.storyboard */,
 				0ECE3D8E249F54E3008D7289 /* Info.plist */,
+				0E1B38D9249F5C8C007539E0 /* GoogleService-Info.plist */,
 				0ECE3D86249F54E1008D7289 /* FinalProject.xcdatamodeld */,
 				0E8CEA70249FC6090023E935 /* testPage.swift */,
+				0ED1585024B1E51C00C3B670 /* Additional */,
 			);
 			path = FinalProject;
+			sourceTree = "<group>";
+		};
+		0ED1585024B1E51C00C3B670 /* Additional */ = {
+			isa = PBXGroup;
+			children = (
+				0ED1585424B1E75100C3B670 /* userDefaults.swift */,
+				0EEBC7F024B1E25400E96F20 /* StoryBoardIDs.swift */,
+				0ED1585124B1E54000C3B670 /* customAlerts.swift */,
+			);
+			path = Additional;
+			sourceTree = "<group>";
+		};
+		0ED1585324B1E61E00C3B670 /* StoryBoards */ = {
+			isa = PBXGroup;
+			children = (
+				0ECE3D8B249F54E3008D7289 /* LaunchScreen.storyboard */,
+				0ECE3D83249F54E1008D7289 /* Main.storyboard */,
+			);
+			path = StoryBoards;
 			sourceTree = "<group>";
 		};
 		27DE965FDC41560EEAC6C389 /* Frameworks */ = {
@@ -241,6 +266,9 @@
 			files = (
 				0E8CEA71249FC6090023E935 /* testPage.swift in Sources */,
 				0E8CEA6F249FB4E50023E935 /* LogInPage.swift in Sources */,
+				0ED1585524B1E75100C3B670 /* userDefaults.swift in Sources */,
+				0EEBC7F124B1E25400E96F20 /* StoryBoardIDs.swift in Sources */,
+				0ED1585224B1E54000C3B670 /* customAlerts.swift in Sources */,
 				0ECE3D82249F54E1008D7289 /* WelcomePage.swift in Sources */,
 				0E8CEA6D249FA9B90023E935 /* SignUpView.swift in Sources */,
 				0ECE3D80249F54E1008D7289 /* AppDelegate.swift in Sources */,
