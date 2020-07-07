@@ -9,7 +9,7 @@
 import Foundation
 
 
-let testPageID = "testPage"
+let mainTabBar = "mainTabBar"
 let loginPageID = "LogInPage"
 
 

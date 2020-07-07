@@ -9,7 +9,7 @@
 import UIKit
 
 class WelcomePage: UIViewController {
-    private let storyBaord = UIStoryboard(name: "Main", bundle: nil)
+    private let storyBaord = UIStoryboard(name: "Authentication", bundle: nil)
     @IBOutlet weak var onGoogle: UIButton!
     @IBOutlet weak var onFacebook: UIButton!
     @IBOutlet weak var onLogIn: UIButton!

@@ -9,9 +9,6 @@ target 'FinalProject' do
 
 pod 'Firebase/Core'
 pod 'Firebase/Auth'
-
-
-#pod 'Bolts'
-#pod ''
+pod 'GoogleSignIn', '~> 4.1.1' 
 
 end

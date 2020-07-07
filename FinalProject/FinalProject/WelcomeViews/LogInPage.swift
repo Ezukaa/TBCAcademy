@@ -9,6 +9,7 @@
 import UIKit
 import FirebaseAuth
 
+
 class LogInPage: UIViewController {
     
 
@@ -25,6 +26,7 @@ class LogInPage: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         savePass.setOn(UDManager.getSavePass(), animated: false)
         
         if savePass.isOn{
@@ -40,7 +42,7 @@ class LogInPage: UIViewController {
     
 
     @IBAction func goToSignUp(_ sender: UIButton) {
-        let storyBaord = UIStoryboard(name: "Main", bundle: nil)
+        let storyBaord = UIStoryboard(name: "Authentication", bundle: nil)
         
         
         let signUpPage = storyBaord.instantiateViewController(withIdentifier: "SignUpView")
@@ -68,7 +70,7 @@ class LogInPage: UIViewController {
             
             print("shevida")
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let mainPage = storyboard.instantiateViewController(withIdentifier: testPageID)
+            let mainPage = storyboard.instantiateViewController(withIdentifier: mainTabBar)
             
             self.navigationController?.pushViewController(mainPage, animated: true)
             
@@ -78,9 +80,7 @@ class LogInPage: UIViewController {
         
     }
     @IBAction func onGoogleTap(_ sender: Any) {
-        print(UDManager.getSavePass())
-        print(UDManager.getUserPass())
-        print(UDManager.getUserEmail())
+        
         
     }
     

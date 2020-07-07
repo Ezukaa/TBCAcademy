@@ -29,7 +29,7 @@ class SignUpView: UIViewController {
     
 
     @IBAction func onLogInTap(_ sender: UIButton) {
-        let storyBaord = UIStoryboard(name: "Main", bundle: nil)
+        let storyBaord = UIStoryboard(name: "Authentication", bundle: nil)
         let logInPage = storyBaord.instantiateViewController(withIdentifier: "LogInPage") as! LogInPage
         self.navigationController?.pushViewController(logInPage, animated: true)
 
@@ -60,7 +60,7 @@ class SignUpView: UIViewController {
                 }
                 
                 
-                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                let storyboard = UIStoryboard(name: "Authentication", bundle: nil)
                 let loginPage = storyboard.instantiateViewController(withIdentifier: loginPageID)
                 self.navigationController?.pushViewController(loginPage, animated: true)
                 

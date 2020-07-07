@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0E1B38DA249F5C8C007539E0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0E1B38D9249F5C8C007539E0 /* GoogleService-Info.plist */; };
+		0E3E93D924B250B900E6C39C /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E3E93D824B250B900E6C39C /* APIService.swift */; };
+		0E3E93DC24B2512A00E6C39C /* JSONParse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E3E93DB24B2512A00E6C39C /* JSONParse.swift */; };
 		0E8CEA6D249FA9B90023E935 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8CEA6C249FA9B90023E935 /* SignUpView.swift */; };
 		0E8CEA6F249FB4E50023E935 /* LogInPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8CEA6E249FB4E50023E935 /* LogInPage.swift */; };
 		0E8CEA71249FC6090023E935 /* testPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8CEA70249FC6090023E935 /* testPage.swift */; };
@@ -19,6 +21,7 @@
 		0ECE3D8D249F54E3008D7289 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0ECE3D8B249F54E3008D7289 /* LaunchScreen.storyboard */; };
 		0ED1585224B1E54000C3B670 /* customAlerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED1585124B1E54000C3B670 /* customAlerts.swift */; };
 		0ED1585524B1E75100C3B670 /* userDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED1585424B1E75100C3B670 /* userDefaults.swift */; };
+		0ED1585724B23F8F00C3B670 /* Authentication.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0ED1585624B23F8F00C3B670 /* Authentication.storyboard */; };
 		0EEBC7F124B1E25400E96F20 /* StoryBoardIDs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EEBC7F024B1E25400E96F20 /* StoryBoardIDs.swift */; };
 		AFABE6833DCCDAE22826E2E5 /* Pods_FinalProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFEEAEDCD8ECAA7DC689B8F8 /* Pods_FinalProject.framework */; };
 /* End PBXBuildFile section */
@@ -28,6 +31,8 @@
 		0E1B38D9249F5C8C007539E0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0E1B38DC249F5F4F007539E0 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
 		0E1B38DD249F6036007539E0 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		0E3E93D824B250B900E6C39C /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		0E3E93DB24B2512A00E6C39C /* JSONParse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONParse.swift; sourceTree = "<group>"; };
 		0E8CEA6C249FA9B90023E935 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		0E8CEA6E249FB4E50023E935 /* LogInPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInPage.swift; sourceTree = "<group>"; };
 		0E8CEA70249FC6090023E935 /* testPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testPage.swift; sourceTree = "<group>"; };
@@ -41,6 +46,7 @@
 		0ECE3D8E249F54E3008D7289 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0ED1585124B1E54000C3B670 /* customAlerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customAlerts.swift; sourceTree = "<group>"; };
 		0ED1585424B1E75100C3B670 /* userDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = userDefaults.swift; sourceTree = "<group>"; };
+		0ED1585624B23F8F00C3B670 /* Authentication.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Authentication.storyboard; sourceTree = "<group>"; };
 		0EEBC7F024B1E25400E96F20 /* StoryBoardIDs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryBoardIDs.swift; sourceTree = "<group>"; };
 		49968BB9668C2BAE0F15A28F /* Pods-FinalProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FinalProject.release.xcconfig"; path = "Target Support Files/Pods-FinalProject/Pods-FinalProject.release.xcconfig"; sourceTree = "<group>"; };
 		AFEEAEDCD8ECAA7DC689B8F8 /* Pods_FinalProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FinalProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -65,6 +71,15 @@
 				0E1B38DC249F5F4F007539E0 /* Roboto-Medium.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		0E3E93DA24B2511800E6C39C /* APIService */ = {
+			isa = PBXGroup;
+			children = (
+				0E3E93D824B250B900E6C39C /* APIService.swift */,
+				0E3E93DB24B2512A00E6C39C /* JSONParse.swift */,
+			);
+			path = APIService;
 			sourceTree = "<group>";
 		};
 		0E8CEA69249FA9710023E935 /* WelcomeViews */ = {
@@ -98,6 +113,7 @@
 		0ECE3D7E249F54E1008D7289 /* FinalProject */ = {
 			isa = PBXGroup;
 			children = (
+				0E3E93DA24B2511800E6C39C /* APIService */,
 				0E8CEA69249FA9710023E935 /* WelcomeViews */,
 				0E1B38DB249F5EF8007539E0 /* Fonts */,
 				0ED1585324B1E61E00C3B670 /* StoryBoards */,
@@ -127,6 +143,7 @@
 			children = (
 				0ECE3D8B249F54E3008D7289 /* LaunchScreen.storyboard */,
 				0ECE3D83249F54E1008D7289 /* Main.storyboard */,
+				0ED1585624B23F8F00C3B670 /* Authentication.storyboard */,
 			);
 			path = StoryBoards;
 			sourceTree = "<group>";
@@ -160,6 +177,7 @@
 				0ECE3D79249F54E0008D7289 /* Frameworks */,
 				0ECE3D7A249F54E0008D7289 /* Resources */,
 				4732321557501AFC8040635F /* [CP] Embed Pods Frameworks */,
+				CE6626387F522615A5C920EF /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -212,6 +230,7 @@
 				0E1B38DA249F5C8C007539E0 /* GoogleService-Info.plist in Resources */,
 				0ECE3D8A249F54E3008D7289 /* Assets.xcassets in Resources */,
 				0ECE3D85249F54E1008D7289 /* Main.storyboard in Resources */,
+				0ED1585724B23F8F00C3B670 /* Authentication.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -233,6 +252,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FinalProject/Pods-FinalProject-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CE6626387F522615A5C920EF /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FinalProject/Pods-FinalProject-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FinalProject/Pods-FinalProject-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FinalProject/Pods-FinalProject-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F29437DA90DB4684E32D15DF /* [CP] Check Pods Manifest.lock */ = {
@@ -265,11 +301,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				0E8CEA71249FC6090023E935 /* testPage.swift in Sources */,
+				0E3E93DC24B2512A00E6C39C /* JSONParse.swift in Sources */,
 				0E8CEA6F249FB4E50023E935 /* LogInPage.swift in Sources */,
 				0ED1585524B1E75100C3B670 /* userDefaults.swift in Sources */,
 				0EEBC7F124B1E25400E96F20 /* StoryBoardIDs.swift in Sources */,
 				0ED1585224B1E54000C3B670 /* customAlerts.swift in Sources */,
 				0ECE3D82249F54E1008D7289 /* WelcomePage.swift in Sources */,
+				0E3E93D924B250B900E6C39C /* APIService.swift in Sources */,
 				0E8CEA6D249FA9B90023E935 /* SignUpView.swift in Sources */,
 				0ECE3D80249F54E1008D7289 /* AppDelegate.swift in Sources */,
 				0ECE3D88249F54E1008D7289 /* FinalProject.xcdatamodeld in Sources */,

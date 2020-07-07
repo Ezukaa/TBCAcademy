@@ -9,14 +9,24 @@
 import UIKit
 
 class testPage: UIViewController {
-
+    @IBOutlet weak var testImage: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
 
     }
     
 
     @IBAction func onSignOut(_ sender: UIButton) {
+        JSONParse.Shared.parseJson { (aee:JobsDetailedResponse) in
+            print(aee.image)
+            aee.image.downloadImage(completion: { (image) in
+                DispatchQueue.main.async {
+                    self.testImage.image = image
+                }
+            })
+        }
     }
     
 
