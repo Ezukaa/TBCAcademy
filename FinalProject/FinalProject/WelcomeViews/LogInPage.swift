@@ -38,6 +38,7 @@ class LogInPage: UIViewController {
         onFacebook.layer.cornerRadius = 10
         onLogIn.layer.cornerRadius = 10
         
+        
     }
     
 
@@ -69,8 +70,19 @@ class LogInPage: UIViewController {
             }
             
             print("shevida")
+//            let storyboard = UIStoryboard(name: "Authentication", bundle: nil)
+//            let loginView: SignInVC = storyboard.instantiateViewControllerWithIdentifier("SignInVC") as! mainViewController
+//            UIApplication.sharedApplication().keyWindow?.rootViewController = loginView
+            
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let mainPage = storyboard.instantiateViewController(withIdentifier: mainTabBar)
+            let mainPage = storyboard.instantiateViewController(withIdentifier: mainTabBarPage)
+            
+            
+
+            let viewController: UIViewController = storyboard.instantiateViewController(withIdentifier: mainTabBarPage) as! UITabBarController
+            UIApplication.shared.keyWindow?.rootViewController = viewController
+            
+
             
             self.navigationController?.pushViewController(mainPage, animated: true)
             

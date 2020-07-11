@@ -8,17 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		0E1B38DA249F5C8C007539E0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0E1B38D9249F5C8C007539E0 /* GoogleService-Info.plist */; };
+		0E39B69024B4D12B00705BD8 /* FilterCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E39B68F24B4D12B00705BD8 /* FilterCollectionCell.swift */; };
 		0E3E93D924B250B900E6C39C /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E3E93D824B250B900E6C39C /* APIService.swift */; };
 		0E3E93DC24B2512A00E6C39C /* JSONParse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E3E93DB24B2512A00E6C39C /* JSONParse.swift */; };
+		0E7F3B4E24B49682008F9B6C /* mainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7F3B4D24B49682008F9B6C /* mainViewController.swift */; };
 		0E8CEA6D249FA9B90023E935 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8CEA6C249FA9B90023E935 /* SignUpView.swift */; };
 		0E8CEA6F249FB4E50023E935 /* LogInPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8CEA6E249FB4E50023E935 /* LogInPage.swift */; };
 		0E8CEA71249FC6090023E935 /* testPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8CEA70249FC6090023E935 /* testPage.swift */; };
+		0E9CD22D24B615D900AA89AF /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9CD22C24B615D900AA89AF /* SettingsViewController.swift */; };
+		0EAA2FBB24B629AD00D5A2DE /* settingsTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAA2FBA24B629AD00D5A2DE /* settingsTableCell.swift */; };
+		0EAA2FBD24B62BD000D5A2DE /* SettingsMVVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAA2FBC24B62BD000D5A2DE /* SettingsMVVM.swift */; };
+		0EAA2FC124B641A400D5A2DE /* SettingsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAA2FC024B641A400D5A2DE /* SettingsModel.swift */; };
+		0EAA2FC324B64A1600D5A2DE /* extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAA2FC224B64A1600D5A2DE /* extensions.swift */; };
+		0EAA2FC524B650A900D5A2DE /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAA2FC424B650A900D5A2DE /* Colors.swift */; };
 		0ECE3D80249F54E1008D7289 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ECE3D7F249F54E1008D7289 /* AppDelegate.swift */; };
 		0ECE3D82249F54E1008D7289 /* WelcomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ECE3D81249F54E1008D7289 /* WelcomePage.swift */; };
 		0ECE3D85249F54E1008D7289 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0ECE3D83249F54E1008D7289 /* Main.storyboard */; };
 		0ECE3D88249F54E1008D7289 /* FinalProject.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0ECE3D86249F54E1008D7289 /* FinalProject.xcdatamodeld */; };
 		0ECE3D8A249F54E3008D7289 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0ECE3D89249F54E3008D7289 /* Assets.xcassets */; };
 		0ECE3D8D249F54E3008D7289 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0ECE3D8B249F54E3008D7289 /* LaunchScreen.storyboard */; };
+		0ECEAA0924B9CE0E00307B7F /* EmployeeCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ECEAA0824B9CE0E00307B7F /* EmployeeCollectionCell.swift */; };
 		0ED1585224B1E54000C3B670 /* customAlerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED1585124B1E54000C3B670 /* customAlerts.swift */; };
 		0ED1585524B1E75100C3B670 /* userDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED1585424B1E75100C3B670 /* userDefaults.swift */; };
 		0ED1585724B23F8F00C3B670 /* Authentication.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0ED1585624B23F8F00C3B670 /* Authentication.storyboard */; };
@@ -31,11 +40,20 @@
 		0E1B38D9249F5C8C007539E0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0E1B38DC249F5F4F007539E0 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
 		0E1B38DD249F6036007539E0 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		0E29553824B482730038262E /* LEMONMILK-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LEMONMILK-Regular.otf"; sourceTree = "<group>"; };
+		0E39B68F24B4D12B00705BD8 /* FilterCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterCollectionCell.swift; sourceTree = "<group>"; };
 		0E3E93D824B250B900E6C39C /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		0E3E93DB24B2512A00E6C39C /* JSONParse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONParse.swift; sourceTree = "<group>"; };
+		0E7F3B4D24B49682008F9B6C /* mainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainViewController.swift; sourceTree = "<group>"; };
 		0E8CEA6C249FA9B90023E935 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		0E8CEA6E249FB4E50023E935 /* LogInPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInPage.swift; sourceTree = "<group>"; };
 		0E8CEA70249FC6090023E935 /* testPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testPage.swift; sourceTree = "<group>"; };
+		0E9CD22C24B615D900AA89AF /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		0EAA2FBA24B629AD00D5A2DE /* settingsTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = settingsTableCell.swift; sourceTree = "<group>"; };
+		0EAA2FBC24B62BD000D5A2DE /* SettingsMVVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsMVVM.swift; sourceTree = "<group>"; };
+		0EAA2FC024B641A400D5A2DE /* SettingsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsModel.swift; sourceTree = "<group>"; };
+		0EAA2FC224B64A1600D5A2DE /* extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extensions.swift; sourceTree = "<group>"; };
+		0EAA2FC424B650A900D5A2DE /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		0ECE3D7C249F54E0008D7289 /* FinalProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinalProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0ECE3D7F249F54E1008D7289 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0ECE3D81249F54E1008D7289 /* WelcomePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomePage.swift; sourceTree = "<group>"; };
@@ -44,6 +62,7 @@
 		0ECE3D89249F54E3008D7289 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0ECE3D8C249F54E3008D7289 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0ECE3D8E249F54E3008D7289 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0ECEAA0824B9CE0E00307B7F /* EmployeeCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeCollectionCell.swift; sourceTree = "<group>"; };
 		0ED1585124B1E54000C3B670 /* customAlerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customAlerts.swift; sourceTree = "<group>"; };
 		0ED1585424B1E75100C3B670 /* userDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = userDefaults.swift; sourceTree = "<group>"; };
 		0ED1585624B23F8F00C3B670 /* Authentication.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Authentication.storyboard; sourceTree = "<group>"; };
@@ -69,6 +88,7 @@
 			children = (
 				0E1B38DD249F6036007539E0 /* Roboto-Regular.ttf */,
 				0E1B38DC249F5F4F007539E0 /* Roboto-Medium.ttf */,
+				0E29553824B482730038262E /* LEMONMILK-Regular.otf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -82,6 +102,16 @@
 			path = APIService;
 			sourceTree = "<group>";
 		};
+		0E7C8D1B24B4B08E002CC04D /* MainPage */ = {
+			isa = PBXGroup;
+			children = (
+				0E7F3B4D24B49682008F9B6C /* mainViewController.swift */,
+				0E39B68F24B4D12B00705BD8 /* FilterCollectionCell.swift */,
+				0ECEAA0824B9CE0E00307B7F /* EmployeeCollectionCell.swift */,
+			);
+			path = MainPage;
+			sourceTree = "<group>";
+		};
 		0E8CEA69249FA9710023E935 /* WelcomeViews */ = {
 			isa = PBXGroup;
 			children = (
@@ -90,6 +120,17 @@
 				0E8CEA6E249FB4E50023E935 /* LogInPage.swift */,
 			);
 			path = WelcomeViews;
+			sourceTree = "<group>";
+		};
+		0E9CD22B24B615B900AA89AF /* SettingsPage */ = {
+			isa = PBXGroup;
+			children = (
+				0E9CD22C24B615D900AA89AF /* SettingsViewController.swift */,
+				0EAA2FBA24B629AD00D5A2DE /* settingsTableCell.swift */,
+				0EAA2FBC24B62BD000D5A2DE /* SettingsMVVM.swift */,
+				0EAA2FC024B641A400D5A2DE /* SettingsModel.swift */,
+			);
+			path = SettingsPage;
 			sourceTree = "<group>";
 		};
 		0ECE3D73249F54E0008D7289 = {
@@ -113,7 +154,8 @@
 		0ECE3D7E249F54E1008D7289 /* FinalProject */ = {
 			isa = PBXGroup;
 			children = (
-				0E3E93DA24B2511800E6C39C /* APIService */,
+				0E9CD22B24B615B900AA89AF /* SettingsPage */,
+				0E7C8D1B24B4B08E002CC04D /* MainPage */,
 				0E8CEA69249FA9710023E935 /* WelcomeViews */,
 				0E1B38DB249F5EF8007539E0 /* Fonts */,
 				0ED1585324B1E61E00C3B670 /* StoryBoards */,
@@ -123,6 +165,7 @@
 				0E1B38D9249F5C8C007539E0 /* GoogleService-Info.plist */,
 				0ECE3D86249F54E1008D7289 /* FinalProject.xcdatamodeld */,
 				0E8CEA70249FC6090023E935 /* testPage.swift */,
+				0E3E93DA24B2511800E6C39C /* APIService */,
 				0ED1585024B1E51C00C3B670 /* Additional */,
 			);
 			path = FinalProject;
@@ -134,6 +177,8 @@
 				0ED1585424B1E75100C3B670 /* userDefaults.swift */,
 				0EEBC7F024B1E25400E96F20 /* StoryBoardIDs.swift */,
 				0ED1585124B1E54000C3B670 /* customAlerts.swift */,
+				0EAA2FC224B64A1600D5A2DE /* extensions.swift */,
+				0EAA2FC424B650A900D5A2DE /* Colors.swift */,
 			);
 			path = Additional;
 			sourceTree = "<group>";
@@ -302,15 +347,24 @@
 			files = (
 				0E8CEA71249FC6090023E935 /* testPage.swift in Sources */,
 				0E3E93DC24B2512A00E6C39C /* JSONParse.swift in Sources */,
+				0EAA2FC124B641A400D5A2DE /* SettingsModel.swift in Sources */,
 				0E8CEA6F249FB4E50023E935 /* LogInPage.swift in Sources */,
 				0ED1585524B1E75100C3B670 /* userDefaults.swift in Sources */,
+				0EAA2FC324B64A1600D5A2DE /* extensions.swift in Sources */,
+				0EAA2FBD24B62BD000D5A2DE /* SettingsMVVM.swift in Sources */,
 				0EEBC7F124B1E25400E96F20 /* StoryBoardIDs.swift in Sources */,
+				0EAA2FBB24B629AD00D5A2DE /* settingsTableCell.swift in Sources */,
+				0E39B69024B4D12B00705BD8 /* FilterCollectionCell.swift in Sources */,
 				0ED1585224B1E54000C3B670 /* customAlerts.swift in Sources */,
+				0ECEAA0924B9CE0E00307B7F /* EmployeeCollectionCell.swift in Sources */,
+				0E9CD22D24B615D900AA89AF /* SettingsViewController.swift in Sources */,
+				0EAA2FC524B650A900D5A2DE /* Colors.swift in Sources */,
 				0ECE3D82249F54E1008D7289 /* WelcomePage.swift in Sources */,
 				0E3E93D924B250B900E6C39C /* APIService.swift in Sources */,
 				0E8CEA6D249FA9B90023E935 /* SignUpView.swift in Sources */,
 				0ECE3D80249F54E1008D7289 /* AppDelegate.swift in Sources */,
 				0ECE3D88249F54E1008D7289 /* FinalProject.xcdatamodeld in Sources */,
+				0E7F3B4E24B49682008F9B6C /* mainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
