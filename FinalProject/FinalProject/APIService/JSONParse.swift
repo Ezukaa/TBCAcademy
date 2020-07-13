@@ -18,7 +18,7 @@ struct JSONParse {
     
     func parseJson<T:Codable>(result: @escaping (T)->()){
 
-        let url = URL(string: "https://run.mocky.io/v3/7145023c-bb00-4c98-9890-ca63fe62441d")!
+        let url = URL(string: "https://run.mocky.io/v3/8ca0bec5-b88f-4ea2-97e3-39a942d44a83")!
         URLSession.shared.dataTask(with: url){(data,res,err) in
             guard let data = data else {return}
             do{

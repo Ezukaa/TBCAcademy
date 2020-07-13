@@ -50,6 +50,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     // MARK: - Core Data stack
+    
+    static var CoreDataContainer: NSPersistentContainer{
+        return(UIApplication.shared.delegate as! AppDelegate).persistentContainer
+    }
 
     lazy var persistentContainer: NSPersistentContainer = {
         /*

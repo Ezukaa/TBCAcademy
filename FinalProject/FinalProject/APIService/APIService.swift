@@ -8,6 +8,12 @@
 
 import Foundation
 
-struct JobsDetailedResponse: Codable {
+struct JobsDetailedResponseElement: Codable {
+    let name, lastName: String
+    let rating: Int
+    let latitude, longitude: Double
+    let intro, job: String
     let image: String
 }
+
+typealias JobsDetailedResponse = [JobsDetailedResponseElement]

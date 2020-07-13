@@ -8,13 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		0E1B38DA249F5C8C007539E0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0E1B38D9249F5C8C007539E0 /* GoogleService-Info.plist */; };
+		0E25ABA224BA2923002274D5 /* CreditCardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E25ABA124BA2923002274D5 /* CreditCardController.swift */; };
 		0E39B69024B4D12B00705BD8 /* FilterCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E39B68F24B4D12B00705BD8 /* FilterCollectionCell.swift */; };
 		0E3E93D924B250B900E6C39C /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E3E93D824B250B900E6C39C /* APIService.swift */; };
 		0E3E93DC24B2512A00E6C39C /* JSONParse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E3E93DB24B2512A00E6C39C /* JSONParse.swift */; };
 		0E7F3B4E24B49682008F9B6C /* mainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7F3B4D24B49682008F9B6C /* mainViewController.swift */; };
 		0E8CEA6D249FA9B90023E935 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8CEA6C249FA9B90023E935 /* SignUpView.swift */; };
 		0E8CEA6F249FB4E50023E935 /* LogInPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8CEA6E249FB4E50023E935 /* LogInPage.swift */; };
-		0E8CEA71249FC6090023E935 /* testPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8CEA70249FC6090023E935 /* testPage.swift */; };
+		0E95D07D24BB4BF900C624DF /* CreditCardCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E95D07B24BB4BF900C624DF /* CreditCardCollectionCell.swift */; };
+		0E95D07E24BB4BF900C624DF /* CreditCardCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E95D07C24BB4BF900C624DF /* CreditCardCollectionCell.xib */; };
 		0E9CD22D24B615D900AA89AF /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9CD22C24B615D900AA89AF /* SettingsViewController.swift */; };
 		0EAA2FBB24B629AD00D5A2DE /* settingsTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAA2FBA24B629AD00D5A2DE /* settingsTableCell.swift */; };
 		0EAA2FBD24B62BD000D5A2DE /* SettingsMVVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAA2FBC24B62BD000D5A2DE /* SettingsMVVM.swift */; };
@@ -40,6 +42,7 @@
 		0E1B38D9249F5C8C007539E0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0E1B38DC249F5F4F007539E0 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
 		0E1B38DD249F6036007539E0 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		0E25ABA124BA2923002274D5 /* CreditCardController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardController.swift; sourceTree = "<group>"; };
 		0E29553824B482730038262E /* LEMONMILK-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LEMONMILK-Regular.otf"; sourceTree = "<group>"; };
 		0E39B68F24B4D12B00705BD8 /* FilterCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterCollectionCell.swift; sourceTree = "<group>"; };
 		0E3E93D824B250B900E6C39C /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
@@ -47,7 +50,8 @@
 		0E7F3B4D24B49682008F9B6C /* mainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainViewController.swift; sourceTree = "<group>"; };
 		0E8CEA6C249FA9B90023E935 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		0E8CEA6E249FB4E50023E935 /* LogInPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInPage.swift; sourceTree = "<group>"; };
-		0E8CEA70249FC6090023E935 /* testPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testPage.swift; sourceTree = "<group>"; };
+		0E95D07B24BB4BF900C624DF /* CreditCardCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardCollectionCell.swift; sourceTree = "<group>"; };
+		0E95D07C24BB4BF900C624DF /* CreditCardCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreditCardCollectionCell.xib; sourceTree = "<group>"; };
 		0E9CD22C24B615D900AA89AF /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		0EAA2FBA24B629AD00D5A2DE /* settingsTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = settingsTableCell.swift; sourceTree = "<group>"; };
 		0EAA2FBC24B62BD000D5A2DE /* SettingsMVVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsMVVM.swift; sourceTree = "<group>"; };
@@ -91,6 +95,16 @@
 				0E29553824B482730038262E /* LEMONMILK-Regular.otf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		0E25ABA024BA2902002274D5 /* CreditCardPage */ = {
+			isa = PBXGroup;
+			children = (
+				0E25ABA124BA2923002274D5 /* CreditCardController.swift */,
+				0E95D07B24BB4BF900C624DF /* CreditCardCollectionCell.swift */,
+				0E95D07C24BB4BF900C624DF /* CreditCardCollectionCell.xib */,
+			);
+			path = CreditCardPage;
 			sourceTree = "<group>";
 		};
 		0E3E93DA24B2511800E6C39C /* APIService */ = {
@@ -154,6 +168,7 @@
 		0ECE3D7E249F54E1008D7289 /* FinalProject */ = {
 			isa = PBXGroup;
 			children = (
+				0E25ABA024BA2902002274D5 /* CreditCardPage */,
 				0E9CD22B24B615B900AA89AF /* SettingsPage */,
 				0E7C8D1B24B4B08E002CC04D /* MainPage */,
 				0E8CEA69249FA9710023E935 /* WelcomeViews */,
@@ -164,7 +179,6 @@
 				0ECE3D8E249F54E3008D7289 /* Info.plist */,
 				0E1B38D9249F5C8C007539E0 /* GoogleService-Info.plist */,
 				0ECE3D86249F54E1008D7289 /* FinalProject.xcdatamodeld */,
-				0E8CEA70249FC6090023E935 /* testPage.swift */,
 				0E3E93DA24B2511800E6C39C /* APIService */,
 				0ED1585024B1E51C00C3B670 /* Additional */,
 			);
@@ -273,6 +287,7 @@
 			files = (
 				0ECE3D8D249F54E3008D7289 /* LaunchScreen.storyboard in Resources */,
 				0E1B38DA249F5C8C007539E0 /* GoogleService-Info.plist in Resources */,
+				0E95D07E24BB4BF900C624DF /* CreditCardCollectionCell.xib in Resources */,
 				0ECE3D8A249F54E3008D7289 /* Assets.xcassets in Resources */,
 				0ECE3D85249F54E1008D7289 /* Main.storyboard in Resources */,
 				0ED1585724B23F8F00C3B670 /* Authentication.storyboard in Resources */,
@@ -345,7 +360,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0E8CEA71249FC6090023E935 /* testPage.swift in Sources */,
+				0E95D07D24BB4BF900C624DF /* CreditCardCollectionCell.swift in Sources */,
 				0E3E93DC24B2512A00E6C39C /* JSONParse.swift in Sources */,
 				0EAA2FC124B641A400D5A2DE /* SettingsModel.swift in Sources */,
 				0E8CEA6F249FB4E50023E935 /* LogInPage.swift in Sources */,
@@ -354,6 +369,7 @@
 				0EAA2FBD24B62BD000D5A2DE /* SettingsMVVM.swift in Sources */,
 				0EEBC7F124B1E25400E96F20 /* StoryBoardIDs.swift in Sources */,
 				0EAA2FBB24B629AD00D5A2DE /* settingsTableCell.swift in Sources */,
+				0E25ABA224BA2923002274D5 /* CreditCardController.swift in Sources */,
 				0E39B69024B4D12B00705BD8 /* FilterCollectionCell.swift in Sources */,
 				0ED1585224B1E54000C3B670 /* customAlerts.swift in Sources */,
 				0ECEAA0924B9CE0E00307B7F /* EmployeeCollectionCell.swift in Sources */,

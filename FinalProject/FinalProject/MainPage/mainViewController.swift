@@ -18,6 +18,8 @@ class mainViewController: UIViewController {
     @IBOutlet weak var buttonToLeft: UIButton!
     @IBOutlet weak var buttonToRight: UIButton!
     
+    
+    
 
     
     override func viewDidLoad() {
@@ -34,6 +36,10 @@ class mainViewController: UIViewController {
 
         
         configureNavigationBar()
+        
+        JSONParse.Shared.parseJson { (qi:JobsDetailedResponse) in
+            print(qi[0].name)
+        }
 
     }
     
