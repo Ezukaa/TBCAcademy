@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E16281124BCA14C0002AE98 /* UserPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E16281024BCA14C0002AE98 /* UserPageController.swift */; };
+		0E16281424BCA34A0002AE98 /* employeePageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E16281324BCA34A0002AE98 /* employeePageController.swift */; };
 		0E1B38DA249F5C8C007539E0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0E1B38D9249F5C8C007539E0 /* GoogleService-Info.plist */; };
 		0E25ABA224BA2923002274D5 /* CreditCardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E25ABA124BA2923002274D5 /* CreditCardController.swift */; };
 		0E39B69024B4D12B00705BD8 /* FilterCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E39B68F24B4D12B00705BD8 /* FilterCollectionCell.swift */; };
@@ -39,6 +41,8 @@
 
 /* Begin PBXFileReference section */
 		087C5AC5C63993A672526B63 /* Pods-FinalProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FinalProject.debug.xcconfig"; path = "Target Support Files/Pods-FinalProject/Pods-FinalProject.debug.xcconfig"; sourceTree = "<group>"; };
+		0E16281024BCA14C0002AE98 /* UserPageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPageController.swift; sourceTree = "<group>"; };
+		0E16281324BCA34A0002AE98 /* employeePageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = employeePageController.swift; sourceTree = "<group>"; };
 		0E1B38D9249F5C8C007539E0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0E1B38DC249F5F4F007539E0 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
 		0E1B38DD249F6036007539E0 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
@@ -87,6 +91,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0E16280F24BCA1200002AE98 /* UserPage */ = {
+			isa = PBXGroup;
+			children = (
+				0E16281024BCA14C0002AE98 /* UserPageController.swift */,
+			);
+			path = UserPage;
+			sourceTree = "<group>";
+		};
+		0E16281224BCA3320002AE98 /* employeePage */ = {
+			isa = PBXGroup;
+			children = (
+				0E16281324BCA34A0002AE98 /* employeePageController.swift */,
+			);
+			path = employeePage;
+			sourceTree = "<group>";
+		};
 		0E1B38DB249F5EF8007539E0 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -168,6 +188,8 @@
 		0ECE3D7E249F54E1008D7289 /* FinalProject */ = {
 			isa = PBXGroup;
 			children = (
+				0E16281224BCA3320002AE98 /* employeePage */,
+				0E16280F24BCA1200002AE98 /* UserPage */,
 				0E25ABA024BA2902002274D5 /* CreditCardPage */,
 				0E9CD22B24B615B900AA89AF /* SettingsPage */,
 				0E7C8D1B24B4B08E002CC04D /* MainPage */,
@@ -369,6 +391,7 @@
 				0EAA2FBD24B62BD000D5A2DE /* SettingsMVVM.swift in Sources */,
 				0EEBC7F124B1E25400E96F20 /* StoryBoardIDs.swift in Sources */,
 				0EAA2FBB24B629AD00D5A2DE /* settingsTableCell.swift in Sources */,
+				0E16281424BCA34A0002AE98 /* employeePageController.swift in Sources */,
 				0E25ABA224BA2923002274D5 /* CreditCardController.swift in Sources */,
 				0E39B69024B4D12B00705BD8 /* FilterCollectionCell.swift in Sources */,
 				0ED1585224B1E54000C3B670 /* customAlerts.swift in Sources */,
@@ -377,6 +400,7 @@
 				0EAA2FC524B650A900D5A2DE /* Colors.swift in Sources */,
 				0ECE3D82249F54E1008D7289 /* WelcomePage.swift in Sources */,
 				0E3E93D924B250B900E6C39C /* APIService.swift in Sources */,
+				0E16281124BCA14C0002AE98 /* UserPageController.swift in Sources */,
 				0E8CEA6D249FA9B90023E935 /* SignUpView.swift in Sources */,
 				0ECE3D80249F54E1008D7289 /* AppDelegate.swift in Sources */,
 				0ECE3D88249F54E1008D7289 /* FinalProject.xcdatamodeld in Sources */,

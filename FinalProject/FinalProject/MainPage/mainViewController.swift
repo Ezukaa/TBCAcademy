@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class mainViewController: UIViewController {
     @IBOutlet weak var filterCollectionView: UICollectionView!
@@ -18,14 +19,20 @@ class mainViewController: UIViewController {
     @IBOutlet weak var buttonToLeft: UIButton!
     @IBOutlet weak var buttonToRight: UIButton!
     
+    var employeeArray: [JobsDetailedResponse] = []
     
+    @IBOutlet weak var userImage: UIImageView!
+    @IBOutlet weak var userName: UILabel!
     
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(didGetNotification(_:)),
+            name: NSNotification.Name("ertaderti"),
+            object: nil)
+        fetchUserInfo()
         
         employeeCollectionView.delegate = self
         employeeCollectionView.dataSource = self
@@ -33,14 +40,45 @@ class mainViewController: UIViewController {
         
         filterCollectionView.delegate = self
         filterCollectionView.dataSource = self
-
         
-        configureNavigationBar()
-        
-        JSONParse.Shared.parseJson { (qi:JobsDetailedResponse) in
-            print(qi[0].name)
+        JSONParse.Shared.parseJson { [weak self](jsonResponse:[JobsDetailedResponse]) in
+            self?.employeeArray = jsonResponse
+            print(jsonResponse[0].name)
+            
+            DispatchQueue.main.async {
+                self?.employeeCollectionView.reloadData()
+            }
         }
 
+    }
+    
+    @objc func didGetNotification(_ notification:Notification){
+        //let text = notification.object as! String?
+        print("movida notif")
+        fetchUserInfo()
+    }
+    func fetchUserInfo(){
+        let context = AppDelegate.CoreDataContainer.viewContext
+        let request:NSFetchRequest<AppUser> = AppUser.fetchRequest()
+        do{
+            let result = try context.fetch(request)
+            
+            if result.count != 0 {
+                self.userName.text = result.last?.fullName
+                if let imageBinart = result.last?.userPic{
+                    self.userImage.image = UIImage(data: imageBinart)
+                    self.userImage.clipsToBounds = true
+                }
+            }
+            
+            
+        }catch{print("ver wamoigo info")}
+    }
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        configureNavigationBar()
     }
     
     override func viewDidLayoutSubviews() {
@@ -68,6 +106,21 @@ class mainViewController: UIViewController {
 extension mainViewController:UICollectionViewDelegate{
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if collectionView == employeeCollectionView{
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let mapPage = storyboard.instantiateViewController(withIdentifier: mapPageID) as! employeePageController
+            
+            mapPage.tempPhone = "Phone: \(employeeArray[indexPath.row].phone)"
+            mapPage.tempDesc  = "Desc: \(employeeArray[indexPath.row].intro)"
+            mapPage.tempName  = "\(employeeArray[indexPath.row].name) \(employeeArray[indexPath.row].lastName)"
+            mapPage.tempScore = "Stars: \(employeeArray[indexPath.row].rating)/5"
+            mapPage.longitude = employeeArray[indexPath.row].longitude
+            mapPage.latitude  = employeeArray[indexPath.row].latitude
+            
+//            mapPage.configure(thisEmployee: employeeArray[indexPath.row])
+            
+            
+            self.navigationController?.pushViewController(mapPage, animated: true)
+            
             return
         }
         
@@ -90,7 +143,7 @@ extension mainViewController:UICollectionViewDelegate{
 extension mainViewController:UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView == employeeCollectionView{
-            return 10
+            return employeeArray.count
 
         }
         return filterArray.count
@@ -102,6 +155,7 @@ extension mainViewController:UICollectionViewDataSource{
             let employeeCell = employeeCollectionView.dequeueReusableCell(withReuseIdentifier: EmployeeCollectionCell.identifier, for: indexPath) as! EmployeeCollectionCell
             
             employeeCell.employeeImage.layer.cornerRadius = 12
+            employeeCell.configure(currEmployee: employeeArray[indexPath.row])
             
             return employeeCell
         }

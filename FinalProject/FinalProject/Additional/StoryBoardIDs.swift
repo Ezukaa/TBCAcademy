@@ -11,6 +11,9 @@ import Foundation
 
 let mainTabBarPage = "mainTabBar"
 let loginPageID = "LogInPage"
+let creditCardPage = "CreditCardController"
+let userPage = "UserPageController"
+let mapPageID = "employeePageController"
 
 
 

@@ -7,11 +7,13 @@
 //
 
 import Foundation
+import UIKit
 
 class UDManager {
     internal static let KEY_SAVE_PASS = "KEY_SAVE_PASS"
     internal static let KEY_USER_PASS = "KEY_USER_PASS"
     internal static let KEY_USER_Email = "KEY_USER_Email"
+
     
     static func getUD()->UserDefaults{
         return UserDefaults.standard
@@ -47,4 +49,7 @@ class UDManager {
     static func getUserEmail()->String{
         return getUD().string(forKey: KEY_USER_Email) ?? ""
     }
+    // USER IMAGE
+
+    
 }

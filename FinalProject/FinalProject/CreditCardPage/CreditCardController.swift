@@ -30,7 +30,7 @@ class CreditCardController: UIViewController {
         super.viewDidLoad()
         
         UNUserNotificationCenter.current().delegate = self
-
+        navigationController?.setNavigationBarHidden(false, animated: false)
         
         cardColectionView.delegate = self
         cardColectionView.dataSource = self
@@ -40,6 +40,7 @@ class CreditCardController: UIViewController {
         
       askNotificationPermission()
     }
+    
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
@@ -196,18 +197,18 @@ class CreditCardController: UIViewController {
         alert.addTextField()
         
         
-        alert.addAction(UIAlertAction(title: "Add", style: .default, handler: { (action) in
+        alert.addAction(UIAlertAction(title: "Add", style: .default, handler: { [weak self](action) in
             guard let alertText = alert.textFields?[0].text else{return}
             
             if Int(alertText) ?? 0 == verification{
-                self.saveCardInfo()
+                self!.saveCardInfo()
                 print("card Saved")
-                self.fetchCardInfo()
+                self!.fetchCardInfo()
                 DispatchQueue.main.async {
-                    self.cardColectionView.reloadData()
+                    self!.cardColectionView.reloadData()
                 }
             }else{
-                showAlert(title: "Error", message: "araswori kodi", currSelf: self)
+                showAlert(title: "Error", message: "araswori kodi", currSelf: self!)
             }
             
             

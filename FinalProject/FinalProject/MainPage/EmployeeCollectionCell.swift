@@ -15,4 +15,24 @@ class EmployeeCollectionCell: UICollectionViewCell {
     @IBOutlet weak var employeeName: UILabel!
     
     
+    func configure(currEmployee:JobsDetailedResponse){
+        
+        
+        
+        currEmployee.image.downloadImage(completion: { (image) in
+            guard let image = image else{ return}
+            DispatchQueue.main.async {
+                self.employeeImage.image = image
+                self.employeeImage.layer.masksToBounds = true
+
+            }
+
+        })
+        
+        employeeName.text = "\(currEmployee.name) \(currEmployee.lastName)"
+        
+        
+    }
+    
+    
 }

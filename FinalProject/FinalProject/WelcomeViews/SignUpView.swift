@@ -52,17 +52,17 @@ class SignUpView: UIViewController {
     func showCreateAccount(email:String,password:String){
         let alert = UIAlertController(title: "Create Account", message: "Would you like to create account", preferredStyle: .alert
         )
-        alert.addAction(UIAlertAction(title: "Continue", style: .default, handler: { _ in
+        alert.addAction(UIAlertAction(title: "Continue", style: .default, handler: { [weak self]_ in
             FirebaseAuth.Auth.auth().createUser(withEmail: email, password: password, completion: { result,error in
                 guard error == nil else{
-                    showAlert(title: "vera", message: "ar daregistrirda", currSelf: self)
+                    showAlert(title: "vera", message: "ar daregistrirda", currSelf: self!)
                     return
                 }
                 
                 
                 let storyboard = UIStoryboard(name: "Authentication", bundle: nil)
                 let loginPage = storyboard.instantiateViewController(withIdentifier: loginPageID)
-                self.navigationController?.pushViewController(loginPage, animated: true)
+                self?.navigationController?.pushViewController(loginPage, animated: true)
                 
             })
         }))
